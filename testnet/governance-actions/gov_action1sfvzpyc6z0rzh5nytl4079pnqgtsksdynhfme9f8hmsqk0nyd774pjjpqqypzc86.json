@@ -1,0 +1,102 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1sfvzpyc6z0rzh5nytl4079pnqgtsksdynhfme9f8hmsqk0nyd774pjjpqqypzc86",
+    "summary": "The proposed Info Governance Action “Proposal to Fund 'Project Nova' - Targeted Strategic Initiatives for Ecosystem Advancement” is unconstitutional.",
+    "rationaleStatement": "This governance action (gov_action1sfvzpyc6z0rzh5nytl4079pnqgtsksdynhfme9f8hmsqk0nyd774pjjpqqypzc86) seeks a treasury withdrawal to fund strategic initiatives including decentralized identity solutions, enhanced interoperability, and dApp development tools. The provided off-chain documentation (Abstract and Rationale sections) states a request for 146,000,000 ada. However, it has been determined that the actual on-chain governance action requests a different amount, specifically 149,000,000 ada. This fundamental inconsistency, coupled with other omissions, forms the basis of this unconstitutional determination.\n\n\n## Constitutional Alignment\n\nThe proposal exhibits clear violations of core constitutional principles and procedural mandates:\n\n- Article III, Section 5 (Procedural Requirements - Content Identicality & Sufficient Information): This article mandates that the \"content of every on-chain governance action must be identical to the final off-chain version of the proposed action.\" The discrepancy between the 146M ada detailed in the rationale and the 149M ada reportedly requested on-chain is a direct and critical violation of this requirement. This prevents informed decision-making by DReps and undermines the transparency and integrity of the governance process. Furthermore, this section requires \"Sufficient rationale... including... relevant supporting materials.\" The proposal, as presented in its text, lacks specific references or links to detailed supporting materials that would typically substantiate a funding request of this magnitude.\n\n- Article IV, Section 4 (Allocation for Audits & Oversight Metrics): This article unequivocally states that \"Any governance action requesting ada from the Cardano Blockchain treasury shall require an allocation of ada as a part of such funding request to cover the cost of periodic independent audits and the implementation of oversight metrics\". The \"Project Nova Funding Proposal\" provides no information on such an allocation for independent audits. This is a direct omission of a mandatory constitutional requirement for treasury funding requests.\n\n- Article IV, Section 2 (Administrator Clarity): While this withdrawal is noted as being pursuant to an approved parent budget (which should have defined primary administrators), the \"Project Nova Funding Proposal\" itself lacks clarity on who the specific administrator(s) for these particular funds would be within the Project Nova initiative and how their distinct oversight occurs post-receipt from any parent budget's administrator. This creates an ambiguity regarding the direct oversight provisions required by Article IV, Section 2.\n\n- Article VII, Section 4 (CC Affirmation): For a Treasury Withdrawal action to be implemented on-chain, it requires affirmation from the Constitutional Committee that it does not violate the Constitution. Given the identified violations, such affirmation cannot be provided.",
+    "precedentDiscussion": "There is no precedent that would excuse or permit a direct discrepancy between the financial amounts stated in off-chain documentation and those requested in an on-chain governance action. This constitutes a fundamental breach of procedural integrity. Similarly, the omission of a mandatory allocation for independent audits as required by Article IV, Section 4 has no precedent for acceptance.",
+    "conclusion": "The \"Project Nova Funding Proposal\" is Unconstitutional. The critical discrepancy between the documented ada request (146M) and the actual on-chain requested amount (149M) is a severe violation of Article III, Section 5, fundamentally compromising the integrity of the proposal. Additionally, the failure to specify an allocation for independent audits as mandated by Article IV, Section 4, is another clear constitutional violation. These issues, compounded by a lack of clarity regarding specific administrators for the Nova funds and sufficient supporting references within its own text, prevent this proposal from being considered constitutionally sound.",
+    "internalVote": {
+      "constitutional": 0,
+      "unconstitutional": 5,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Preamble",
+        "uri": "ipfs://bafkreiazhhawe7sjwuthcfgl3mmv2swec7sukvclu3oli7qdyz4uhhuvmy"
+      },
+      {
+        "@type": "RelevantArticles",
+        "label": "Article III, Section 5",
+        "uri": "ipfs://bafkreiazhhawe7sjwuthcfgl3mmv2swec7sukvclu3oli7qdyz4uhhuvmy"
+      },
+      {
+        "@type": "RelevantArticles",
+        "label": "Article IV, Section 2, 3 and 4",
+        "uri": "ipfs://bafkreiazhhawe7sjwuthcfgl3mmv2swec7sukvclu3oli7qdyz4uhhuvmy"
+      },
+      {
+        "@type": "RelevantArticles",
+        "label": "Article VII, Section 4",
+        "uri": "ipfs://bafkreiazhhawe7sjwuthcfgl3mmv2swec7sukvclu3oli7qdyz4uhhuvmy"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Metadata Anchor URL",
+        "uri": "ipfs://bafkreiew3wxdtgytkrtg3h7jzlspgfiktpxz7x3onz2yaa345ekrg7jz5q"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Metadata Anchor Hash",
+        "uri": "5b6b4c4feab9c76a4c218ae84dd638e2d59d0a307f4628da996a1ac6b565d64d"
+      }
+    ]
+  }
+}
