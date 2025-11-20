@@ -63,8 +63,8 @@
     "internalVote": {
       "constitutional": 0,
       "unconstitutional": 1,
-      "abstain": 3,
-      "didNotVote": 1,
+      "abstain": 4,
+      "didNotVote": 0,
       "againstVote": 0
     },
     "references": [

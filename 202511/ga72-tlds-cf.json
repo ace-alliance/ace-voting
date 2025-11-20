@@ -61,10 +61,10 @@
     "counterargumentDiscussion": "None",
     "conclusion": "Due to its adherence to constitutional provisions under Articles III and VII of the Cardano Constitution, this Info Action is Constitutional.",
     "internalVote": {
-      "constitutional": 4,
+      "constitutional": 5,
       "unconstitutional": 0,
       "abstain": 0,
-      "didNotVote": 1,
+      "didNotVote": 0,
       "againstVote": 0
     },
     "references": [
