@@ -1,0 +1,103 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action13a2dqgwxum7d6kjfprcs57cf9733ek2dkt5qnuhqd4ll5ntcwu7sqluwkxd",
+    "summary": "Ace Alliance finds the proposed “Cardano Critical Integrations Budget” Info Action Constitutional.",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/QmWaDrUxrXZVVEnfLVTWZF9EeVXp56PikTPwmPwEcQbdck\n\nThis Budget Info Action proposes the use of 70,000,000 ada from the Cardano Treasury  for critical ecosystem integrations with an  administration and oversight model consistent with Article IV of the Cardano Constitution.\n\nThe proposal’s purpose fits squarely within the Constitution’s enumerated aims for Treasury utilization. It seeks to fund infrastructure for the ongoing operation and future development of the Cardano ecosystem, including integrations that expand interoperability, liquidity rails, analytics, and oracle capabilities. These aims constitute ecosystem-wide public goods which can catalyze broader participation and growth across the network.\n\nWe also recognize that the proposal incorporates expected  governance and accountability elements. It identifies an Administrator, Intersect,, describes a milestone-based drawdown approach, and allocates resources for independent audits and ongoing reporting. The proposal commits to the  community-auditable, segregated custody  of funds through dedicated addresses or accounts, and provides that such funds will be delegated to the predefined auto-abstain option and not staked to any SPO. These safeguards align with the requirements of Article IV for disbursed Treasury funds administration, auditability, and governance influence  mitigation. \n\nFinally, we note that this Budget Info Action describes specific confidentiality constraints surrounding  vendor pricing and partner disclosures. Confidentiality does not necessarily render a budget unconstitutional, provided that such confidentiality is narrowly tailored to facilitate the aim of the Action and in the best interest of the Community. Here, as indicated by the proposal’s authors, the disclosure of such information could both preclude engagement with vendors and partners from the outset and undermine the negotiation of favorable terms in the best interest of the Community. Despite the unavailability of more granular information on vendor pricing and partner disclosures due to normative confidentiality obligations, Administrator oversight and independent audit can ensure Community  receipt of meaningful reporting on disbursements and delivery outcomes.\n\nOn these bases, Ace Alliance both finds the  Action Constitutional  and expects that subsequent Treasury Withdrawal materials will  facilitate  clear accountability through contracts, milestone verification, and auditable reconciliation.",
+    "precedentDiscussion": "To constitute a valid foundation for subsequent Treasury Withdrawal Governance Actions, Budget Info Actions must be found Constitutional  by the Constitutional Committee in a state satisfying the commiteeMinSize parameter. At the time of Action submission and when Ace Alliance first evaluated its constitutionality,  the Constitutional Committee size was below the committeeMinSize parameter. Accordingly,  we provisionally found the Action Unconstitutional and published  a rationale to bring this to the attention of Cardano governance participants.\n\nBecause a new member of the Constitutional Committee is active  as of Epoch 602, satisfying the commiteeMinSize parameter,  we evaluate and find the Action Constitutional on that and all remaining grounds. More information on our provisional finding of unconstitutionality on this now-remedied basis can be found in the corresponding rationale (https://raw.githubusercontent.com/ace-alliance/ace-voting/refs/heads/main/202512/ga75-cib.json).",
+    "counterargumentDiscussion": "None",
+    "conclusion": "Ace Alliance finds this Budget Info Action Constitutional. Meeting the requirements of  Article IV, the Action seeks funding for ecosystem-wide critical integrations, specifies a named administrator to oversee milestone-based disbursements, provides for auditable custody of funds in segregated accounts delegated to auto-abstain, and integrates independent audit and reporting safeguards.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution (IPFS)",
+        "uri": "ipfs://bafkreiazhhawe7sjwuthcfgl3mmv2swec7sukvclu3oli7qdyz4uhhuvmy"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Metadata Anchor URL (IPFS)",
+        "uri": "ipfs://bafkreicbxui5lbdrgcpjwhlti3rqkxfnd3vveiinkcu2zak5bny435w4yq"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Metadata Anchor Hash",
+        "uri": "fec4cec86fe2c537c5f50c54dce3a200191d34c2330c2586792429aeeb05dc53"
+      },
+      {
+        "@type": "Other",
+        "label": "Previous Voting Rationale",
+        "uri": "https://raw.githubusercontent.com/ace-alliance/ace-voting/refs/heads/main/202512/ga75-cib.json"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://QmWaDrUxrXZVVEnfLVTWZF9EeVXp56PikTPwmPwEcQbdck"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
