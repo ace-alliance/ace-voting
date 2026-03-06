@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1wwjwkg2g0qwr0mehey9r8gwn6qz3r28wl6wdl2s75kfmpy8j87tqqtft9tp",
+    "summary": "Ace Alliance finds the proposed “Net Change Limit of 300 Million ADA for Epochs 613–713” Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/Qme6Hnuf6Q9KopHVzjgrrndTaXh5sjLTVkpE4nmpZn2PbM\n\nThis Info Governance Action proposes establishing a Net Change Limit (\"NCL\") for the Cardano Treasury of 300 million ada between the beginning of Epoch 613 (13 February 2026\\) and the end of Epoch 713 (3 July 2027). Its purpose is to seek DRep consensus on this limit, which serves as a constitutionally mandated prerequisite (per **Article II.7.3** and Guardrails **TREASURY-01a/02a**) for subsequent treasury withdrawal actions.\n\nThe proposal's definition of the NCL as a cap on total withdrawals aligns with **Defined Term 7** of the Constitution, which explicitly defines the \"Net Change Limit\" as \"*The maximum allowed amount or percentage of lovelace that may be removed from the Cardano Treasury in a given period*\". The proposal establishes this exact parameter (\"300 million ada\") for a specific period (\"Epoch 613 to Epoch 713\"), fulfilling the constitutional definition.\n\n**Constitutional Alignment** \n\nWe find the proposal aligns with the constitutional framework:\n\n* **Article II.6.1-2:** The proposal meets procedural standards. It provides comprehensive metadata linked via an immutable IPFS address (`ipfs://bafkreid7tr5uotr4bp2jp54q7lbm5p5eldncuahprj53msy6kqgjscyrdu`) with a verified hash, maintaining best practices in governance transparency and verifiability.  \n* **Article II.7.3 and Appendix I.TREASURY-01a/02a:** This proposal directly addresses the constitutional requirement to set a Net Change Limit. Article II.7.3 confirms that Treasury Withdrawals \"must not exceed the Net Change Limit for that period,\" making this action a necessary governance step before future Treasury Withdrawals can occur.  \n* **Article III.1.4:** This proposal appropriately uses the Info Action mechanism. This section clarifies that the Constitutional Committee is limited to voting on the constitutionality of governance actions, \"including any proposed or contemplated actions contained within 'Info' actions\". Our 'Yes' vote reflects a positive opinion on the constitutionality of establishing this specific NCL for the stated period.",
+    "precedentDiscussion": "None",
+    "counterargumentDiscussion": "* **Extended Duration (16 months):** The NCL period spans Epoch 613 to 713 (approx. 16 months). The Constitution does not prescribe a specific duration for financial periods, leaving this to the discretion of the community. The rationale provided, aligning the NCL cycle with the mid-year budget season to utilize complete year-end data, is a valid justification for this duration and is constitutionally permissible.  \n* **Economic Value:** The requested NCL amount (300M ada) is below the realized 2025 Treasury inflows (\\~307M ada). Assessing the economic prudence of this specific figure is the purview of DReps; constitutionally, the requirement is simply that a limit be set, and there is no requirement that it must pertain to the Treasury inflows.",
+    "conclusion": "Due to its adherence to constitutional provisions, this Info Action is Constitutional.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreid7tr5uotr4bp2jp54q7lbm5p5eldncuahprj53msy6kqgjscyrdu"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "4e264b46f948da4a1917be590d14f10f9e36372075fd11561669180747c0588b"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://Qme6Hnuf6Q9KopHVzjgrrndTaXh5sjLTVkpE4nmpZn2PbM"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
