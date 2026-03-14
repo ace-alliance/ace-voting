@@ -1,0 +1,111 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action19uhuy5uame2s60yrh6n8cyds8ps5q7tkh05dqlzmpcfy429p9w4qq5ll3g0",
+    "summary": "Ace Alliance finds the proposed “Amaru Treasury Withdrawal 2026” Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/QmTVLbVxNjMdX9nXWvU1sKnmJD2yasCWgXEEgfFbh7Pth4\n\nThis Treasury Withdrawal Governance Action (TWGA) seeks ₳10,142,000 to support Amaru’s 2026 work towards an interoperable, block-producing Cardano node implementation, with milestones extending from January through December 2026. The proposal’s central aim is to bring Amaru to production readiness by achieving feature parity with the Haskell node, beginning with a relay-capable node able to follow chain selection, diffuse transactions and blocks, and fully validate ledger compliance. It also proposes continued hardening of the system through work on the mempool, performance, observability, and, ultimately, safe block-production capability, while maintaining interoperability and usability on lower-resource hardware.\n\nArticle II.6 requires governance actions to be submitted in a standardized and legible format, supported by immutable off-chain documentation, and accompanied by sufficient rationale, including a title, abstract, justification, and supporting materials. On its face, this proposal satisfies those requirements. It was submitted in a standardized format, provides both a URL and hash for immutable off-chain content, and includes the required abstract, rationale, and supporting materials.\n\nArticle II.7 imposes additional requirements specific to TWGAs, and the proposal addresses each of them. It identifies the purpose of the withdrawal, specifies the 2026 delivery period, describes the cost structure and refund conditions, and discloses prior treasury funding received within the last 24 months It also provides for periodic independent audits and oversight metrics, designates administrators known to the community who are working through a smart contract, and states that treasury funds will be held in five separate script-controlled accounts that are auditable by the community and delegated only to the predefined abstain governance option rather than to a DRep or SPO. We apply Article II.7.3, requiring “A Net Change Limit must be set” and “Treasury Withdrawals actions must not exceed the Net Change Limit for that period,” concluding this is not a barrier to this action’s constitutionality. See Precedent Discussion, below.",
+    "precedentDiscussion": "Under Article II.7.3, a Net Change Limit (NCL) must be set for a TWGA to be found Constitutional. Accordingly, we look to the “Net Change Limit (Epoch 613 to Epoch 713)” (gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q) governance action (“350M ADA NCL”).\n\nWhile the 350M ADA NCL did receive sufficient DRep support, the four Yes and three non-votes by CC members resulted in 4/7 (57%) CC approval. Before evaluating whether this NCL action passed, we must first assess whether a proposed NCL contained in an Info Action is subject to CC review.\n\nThe Constitution expressly resolves the question of whether an NCL Info Action is subject to CC review. Within the CCs limited role of voting on the constitutionality of governance actions, the scope of Article III.1.4 includes “any proposed or contemplated actions contained within Info actions.” That provision is directly relevant here, where the NCL Info Action was the proposed mechanism by which the Net Change Limit required under Article II.7.3 would be set. This Info Action, like all governance actions reviewed for constitutionality by the CC, must resolve to a definitive state of constitutional or unconstitutional at the close of voting. Otherwise, Article III.1.4 would have no effect.\n\nAs for whether the NCL Info Action passed, the Constitution provides a single method for mapping CC votes to the relevant constitutionality outcome. Article III.1.3 states that no governance action, other than a No Confidence or Update Committee action, may be implemented on-chain without affirmation by the requisite percentage of CC members. For the relevant period, that requisite percentage was set on-chain at 67% through the applicable Update Committee action (gov_action1g7sw0f8e8qa34lppj2erksvzf4j6e9udwaq6efslc8apdqeazygsq2spyyt). This on-chain action established the binding method for translating Yes votes, No votes, Abstentions, and non-votes into a final disposition. The Constitution establishes this cumulative threshold mechanism, and the view of any one CC member does not determine the outcome.\n\nUnder ordinary circumstances, this framework would require treating the 350 Million ADA NCL as having failed to achieve the constitutionality threshold. Four Yes votes and three non-votes do not satisfy the 67% requirement. However, the present case is not ordinary. Here, individuals from two of the three non-voting CC seats publicly stated that they did not believe voting on Info Actions was required, and that they considered the 350 Million ADA NCL to be constitutionally valid.\n\nWhile those statements do not alter the ordinary constitutional rule or create an alternative to on-chain voting, they do bear directly on whether the failure to record votes on-chain reflected substantive opposition to the NCL or a mistaken understanding of their duty to vote. Because an Abstain vote removes a CC member from the calculation’s denominator, the action would have met the 67% CC approval threshold if even one of the three non-votes had been an abstain vote. If a member intends to avoid impacting this adjudication calculation, that member must vote Abstain.\n\nUnder these extraordinary circumstances, Ace Alliance will look beyond the NCL Info Action and consider CC member votes on this TWGA. If CC voting meets the constitutionally established threshold on this action, Ace Alliance will defer to this outcome for the purpose of evaluating whether the 350M ADA NCL is constitutional and in-effect.",
+    "counterargumentDiscussion": "A valid counterargument is that the Constitution does not authorize displacing on-chain voting results to reconsider governance action outcomes. On that view, our constitutional framework requires votes to be cast through the prescribed process, and neither an individual CC member, nor the CC collectively, may depart from that framework to reconstruct votes after the fact. Our constitutional system of governance is designed to operate through recorded governance actions and votes, and considerable mischief can be done by governance actors who seek to arbitrarily reconsider previously adjudicated outcomes. This argument is persuasive, and under ordinary circumstances it would be the prevailing view.\n\nUnder these unusual circumstances, however, we must balance other significant interests, including that all users of the Cardano Blockchain shall be treated fairly and impartially, taking into account the collective desires of the Cardano community under Article I.1.9. Here, it would be plainly unjust to allow the Cardano Community to suffer for the inaction of members of the Constitutional Committee. Under these facts, this consideration weighs heavily in favor of recognizing that the non-votes at issue reflect a mistaken view of voting obligations, and not opposition to the NCL. This measure is necessary to mitigate further harm, to avoid imposing the consequences of admitted procedural neglect on the proposal’s submitters and the community as a whole, and not a rejection of the constitutional voting framework.\n\nAccordingly, Ace Alliance will treat the 350M ADA NCL as constitutional for purposes of this, and any other TWGA submitted pursuant to this 350M ADA NCL, so long as this action meets the required 67% CC affirmation. At the same time, we emphasize that this is an extraordinary, and not normative measure. CC members have a constitutional duty to cast votes on all governance actions for which their constitutional role is implicated, which explicitly includes Info Actions under Article III.1.4.\n\nSeparately, we encourage the Cardano community to explore more explicit and robust means for setting Net Change Limits.",
+    "conclusion": "Ace Alliance finds the proposed “Amaru Treasury Withdrawal 2026” Governance Action constitutional, so long as the requisite CC affirmation threshold is met at the conclusion of voting.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreicshobgfe6o6siinj6ym4yxpz4dyyf3dqfex3w42htfvhpdn6msfu"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "c5604e100bd27b04f620d38b0389ad7687da9e1fd5f602f5372157fd0e78adce"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Net Change Limit (Epoch 613 to Epoch 713)",
+        "uri": "gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Update Committee governance action",
+        "uri": "gov_action1g7sw0f8e8qa34lppj2erksvzf4j6e9udwaq6efslc8apdqeazygsq2spyyt"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://QmTVLbVxNjMdX9nXWvU1sKnmJD2yasCWgXEEgfFbh7Pth4"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
