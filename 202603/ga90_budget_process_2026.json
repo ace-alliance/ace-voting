@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1a95na44kgedjk3k64ajpfp4p9d9jj3sgzc6tt9nmnkvgj7c9nraqq7g4d2u",
+    "summary": "Ace Alliance finds the proposed “Cardano Budget Process Framework (facilitated by Intersect)” Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/QmW5cXp68Gbnc4pH4MFsR8Wm7BAkV8KNqEg7RX8jiEkv1d\n\nThis Info Governance Action (gov\\_action1a95na44kgedjk3k64ajpfp4p9d9jj3sgzc6tt9nmnkvgj7c9nraqq7g4d2u) proposes a structured framework for the 2026 Cardano budgeting cycle administered by Intersect. Our review confirms that this proposal adheres to the constitutional requirements governing Info Actions. Importantly, under the Cardano Constitution, no single entity holds a monopoly on running a budget process or requesting treasury withdrawals.\n\n**Constitutional Alignment**\n\nThe governance action aligns with the constitutional framework for the following reasons:\n\n* **Procedural Requirements (Article II.6):** The proposal follows the standardized format, provides sufficient rationale (including a title, abstract, and motivation), and utilizes an immutable `ipfs://` anchor link and hash to host off-chain context.  \n* **Nature of Info Actions (Appendix I.8):** The Constitution explicitly states that Info Actions are not enacted on-chain and that no guardrails are imposed upon them. Using an Info Action to record a proposed community workflow is a valid and permissible use of this mechanism.  \n* **Constitutional Review (Article III.1.4):** The Constitutional Committee is authorized to evaluate the constitutionality of actions contemplated within Info Actions. The administrative framework described within the text does not violate any constitutional tenets or provisions.",
+    "precedentDiscussion": "None",
+    "counterargumentDiscussion": "A potential counterargument is that formalizing this specific framework centralizes the Cardano budgeting process. However, utilizing an Info Action to document a community process establishes clear expectations without enacting binding protocol changes or creating exclusivity. The Constitution and the ledger rules of the Cardano Blockchain guarantee that any community member can propose governance actions. This Info Action simply presents one structured pathway for proposers to use; it does not preclude independent treasury requests or competing frameworks.",
+    "conclusion": "Due to its adherence to constitutional provisions, this Info Action is Constitutional.",
+    "internalVote": {
+      "constitutional": 4,
+      "unconstitutional": 0,
+      "abstain": 1,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreidkxk3akjqukgyuxp65g2pesfbhk2miepg7cd6tq7u2hujxmxqzvu"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "34f05fe67c8f4172ac5e955c20c8204d37a3f5b2561038d199f4f626a32db6cf"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://QmW5cXp68Gbnc4pH4MFsR8Wm7BAkV8KNqEg7RX8jiEkv1d"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}

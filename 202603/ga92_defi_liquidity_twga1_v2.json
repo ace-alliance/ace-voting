@@ -1,0 +1,116 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1uhzd06a26qavzflvrx3gvcz6rzxkl6su2ns8t3seef5e8dl6nlgsqcgtufg",
+    "summary": "Ace Alliance finds the proposed “Cardano Defi Liquidity Budget \\- Withdrawal 1” \\[March 2026\\] Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/QmP3A3fuznRkDwxWcKY2DmFVXoCEFZTN3NpLa1TmRo4Vtm\n\n“Cardano Defi Liquidity Budget \\- Withdrawal 1” \\[March 2026\\] Governance Action (gov\\_action1uhzd06a26qavzflvrx3gvcz6rzxkl6su2ns8t3seef5e8dl6nlgsqcgtufg) Constitutional.\n\nThis Treasury Withdrawals Governance Action (TWGA) seeks to withdraw 800,000 ada from the Cardano Treasury to establish a foundation, create smart contracts, and audit said smart contracts for a DeFi liquidity fund.\n\nUnder II.6.1, all governance actions “shall follow a standardized and legible format before being recorded or enacted on-chain. This format shall include a URL hosting a document that outlines additional context for the proposed governance action, and the hash of this document. The document hosted by such a URL shall be immutable and incapable of being altered after submission, and the content of every on-chain Governance Action must be identical to the final off-chain version of the proposed action.” This TWGA fulfills this requirement by using a GitHub URL with the commit-hash embedded, making it incapable of post-submission alteration.\n\nUnder II.7.1, all TWGAs “must specify the terms of the withdrawal. This shall include: the purpose of the withdrawal, the period for delivery of proposed activities which the withdrawal shall be used for, the relevant costs and expenses of the proposed activities, circumstances under which the withdrawal might be refunded to the Cardano Treasury.” This TWGA satisfies that requirement on its face. It specifies the purpose of the withdrawal, provides a delivery period of six months from the date funds are received by the Amaru contract, and sets out the relevant costs and expenses for legal structure, smart contract audit, Amaru contract setup, and smart contract development. It also states specific circumstances under which funds shall be refunded to the Cardano Treasury, including service provider non-performance, cost savings, legal formation impossibility, technical impossibility, governance changes, and any remaining unused funds after completion of the funded activities.\n\nUnder II.7.2, all TWGAs “shall disclose whether the prospective recipient of the Treasury Withdrawals action has received ada from the Cardano Treasury within the last 24 months.” This TWGA satisfies that requirement by identifying the prospective recipient as the Stablecoin DeFi Liquidity Interim Committee, acting through an Amaru multisig contract requiring 5-of-9 signatures, and expressly stating that it has not received ada from the Cardano Treasury within the last 24 months.\n\nThe proposal also addresses the remaining Treasury Withdrawal standards. It states that the withdrawal does not exceed the Net Change Limit, allocates 111,000 ada for an independent smart contract security audit, defines monthly oversight metrics, designates the nine-person Interim Committee as administrators responsible for monitoring fund use and ensuring deliverables are achieved, and provides that withdrawn ada will be held in a separate auditable Amaru multisig account that is not delegated to an SPO and is instead delegated to the predefined abstain voting option.",
+    "precedentDiscussion": "Under Article II.7.3, a Net Change Limit (NCL) must be set for a TWGA to be found Constitutional. Accordingly, we look to the “Net Change Limit (Epoch 613 to Epoch 713)” (gov\\_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q) governance action (“350M ADA NCL”).\n\nIn our voting rationale for the “Amaru Treasury Withdrawal 2026,” we addressed the fact that the 350M ADA NCL Info Action received only 57% CC approval due to three non-votes, falling short of the required 67% threshold. We applied a narrow exception: because the non-votes reflected a mistaken procedural view rather than substantive opposition to the NCL itself, we would defer to the CC's aggregate vote on the Amaru TWGA to determine the constitutional validity of the 350M ADA NCL.\n\nBecause the Amaru TWGA successfully met the DRep and CC approval threshold and was enacted on March 25, 2026, Ace Alliance considers the 350M ADA NCL to be definitively set and active.",
+    "counterargumentDiscussion": "A valid counterargument is that the Constitution does not authorize displacing the on-chain voting results of an Info Action to reconsider the outcomes of subsequent TWGAs. As we noted in our Amaru rationale, this argument is persuasive and, under ordinary circumstances, would be the prevailing view.\n\nHowever, we previously determined that we must balance this against Article I.1.9, which mandates that all users of the Cardano Blockchain shall be treated fairly and impartially. It would be unjust to penalize TWGA submitters and the Cardano Community for the inaction of three Constitutional Committee members on the 350M ADA NCL action. Having already applied this narrow exception to treat the 350M ADA NCL as validly set based upon successful passage of the Amaru TWGA, we consistently apply that established precedent here. The NCL is active, and this proposal operates validly within its remaining balance.",
+    "conclusion": "Ace Alliance therefore finds this TWGA constitutional under Article II.6.1 and Article II.7.1 through II.7.6.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "https://raw.githubusercontent.com/theeldermillenial/2025-liquidity-budget/f824da7f0c2dbab15e324d1736a967de87d34f7d/w1.jsonld"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "2b6d10884910aba1478c7e9b94207e54bd569eaea7262cff71df9d2053668f63"
+      },
+      {
+        "@type": "Other",
+        "label": "Amaru Treasury Withdrawal 2026 Governance Action",
+        "uri": "gov_action19uhuy5uame2s60yrh6n8cyds8ps5q7tkh05dqlzmpcfy429p9w4qq5ll3g0"
+      },
+      {
+        "@type": "Other",
+        "label": "350 Million ADA NCL",
+        "uri": "gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q"
+      },
+      {
+        "@type": "Other",
+        "label": "Ace Alliance Voting Rationale for Amaru Treasury Withdrawal 2026",
+        "uri": "ipfs://QmUsyk55hByVuGU8BCTH48fk6rX1jKhQ2JwVpCMTJvyq7e"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://QmP3A3fuznRkDwxWcKY2DmFVXoCEFZTN3NpLa1TmRo4Vtm"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
