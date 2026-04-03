@@ -1,0 +1,121 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action13qr78nhrhetywapvx2wpm63y9uxpc2dc45zsu9gkncasxqhuhltqqqfu32x",
+    "summary": "Ace Alliance finds the proposed \"Cardano x Draper Dragon: Orion Fund\" Treasury Withdrawal Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/Qmdzdoqbp2TRgCXKsMAtCRyh5gdWBW26RcwCSp9BpTzX2L\n\nThis Treasury Withdrawal Governance Action (TWGA) requests 50,000,000 ada (approximately 15M USD at an assumed 0.30 USD/ADA) to fund Tranche One of the Draper Dragon Orion Fund, a multi-year ecosystem investment fund managed by Draper Dragon Orion GP, LLC. Capital flows through Arouet Holdings, an ownerless Cayman Islands entity structured as the limited partner, with the stated objective of returning capital to the Cardano Treasury.\n\nUnder Article II.6, governance actions must use a standardized format, include an immutable URL and hash, and provide sufficient rationale. This TWGA satisfies these requirements by utilizing an immutable IPFS URL (ipfs://QmPXYnQ65EuKCVPrWfDqFZmiF8Y4PzxZ87XrGs6UaMkNru) and verified hash. The proposal provides a title, abstract, motivation, rationale, and supporting references including a PDF copy and forum discussion.\n\nUnder Article II.7, TWGAs must meet six specific requirements. This TWGA satisfies all of them:\n* II.7.1 (Terms): Specifies the purpose (ecosystem investment fund), the period (Tranche One commencing upon receipt of funds, with a 6–8 year fund term), relevant costs broken down across Direct Investments (~10.75M USD), Growth Capital (~1.9M USD), Startup Acceleration (~1M USD), and Direct Fund Operational Expenses (~1.35M USD). Refund circumstances are addressed: if the Orion Fund does not commence operations, unused capital is returned to Arouet Holdings for repayment to the Treasury.\n* II.7.2 (Disclosure): The proposal confirms that neither Arouet Holdings as proposer nor the Orion Fund has received funds from the Treasury within the past two years.\n* II.7.3 (Net Change Limit): A Net Change Limit must be set and not exceeded. The 350M ADA NCL is treated as set (see Precedent). With 10,142,000 ada enacted to date under this NCL (Amaru), the remaining balance is 339,858,000 ada. This 50,000,000 ada request does not exceed that balance.\n* II.7.4 (Audits): The proposal allocates 300,000 USD for audit, legal, tax, and compliance as Customary Fund Expenses. The proposal describes quarterly reporting to the Community, including disclosed metrics and observable ecosystem impact assessments. These provisions satisfy the requirement for periodic independent oversight of fund usage.\n* II.7.5 (Administrators): The proposal designates Arouet Holdings as the receiving entity, with a Community-appointed director as set out in Section 9 of the proposal. Additionally, the proposal names the Cardano Foundation as the constitutionally mandated administrator. The General Partner (Draper Dragon Orion GP, LLC) manages fund operations.\n* II.7.6 (Custody): The proposal structures fund flows through Arouet Holdings, an ownerless legal entity with a Community-appointed director, prior to deployment into the Orion Fund. The distribution waterfall in Section 4.4 ensures the Treasury is fully repaid all capital allocated towards Ecosystem Support & Investments before any profit participation by the General Partner occurs.",
+    "precedentDiscussion": "Under Article II.7.3, a Net Change Limit (NCL) must be set for a TWGA to be found Constitutional. Accordingly, we look to the \"Net Change Limit (Epoch 613 to Epoch 713)\" (gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q) governance action (\"350M ADA NCL\").\n\nIn our voting rationale for the \"Amaru Treasury Withdrawal 2026,\" we addressed the fact that the 350M ADA NCL Info Action received only 57% CC approval due to three non-votes, falling short of the required 67% threshold. We applied a narrow exception: because the non-votes reflected a mistaken procedural view rather than substantive opposition to the NCL itself, we would defer to the CC's aggregate vote on the Amaru TWGA to determine the constitutional validity of the 350M ADA NCL.\n\nBecause the Amaru TWGA successfully met the DRep and CC approval threshold and was enacted on March 25, 2026, Ace Alliance considers the 350M ADA NCL to be definitively set and active.",
+    "counterargumentDiscussion": "A valid counterargument is that the Constitution does not authorize displacing the on-chain voting results of an Info Action to reconsider the outcomes of subsequent TWGAs. As we noted in our Amaru rationale, this argument is persuasive and, under ordinary circumstances, would be the prevailing view.\n\nHowever, we previously determined that we must balance this against Article I.1.9, which mandates that all users of the Cardano Blockchain shall be treated fairly and impartially. It would be unjust to penalize TWGA submitters and the Cardano Community for the inaction of three Constitutional Committee members on the 350M ADA NCL action. Having already applied this narrow exception to treat the 350M ADA NCL as validly set based upon successful passage of the Amaru TWGA, we consistently apply that established precedent here. The NCL is active, and this proposal operates validly within its remaining balance.",
+    "conclusion": "Ace Alliance finds the proposed \"Cardano x Draper Dragon: Orion Fund\" Treasury Withdrawal Governance Action Constitutional.",
+    "internalVote": {
+      "constitutional": 4,
+      "unconstitutional": 0,
+      "abstain": 1,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmPXYnQ65EuKCVPrWfDqFZmiF8Y4PzxZ87XrGs6UaMkNru"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "6dbc26337a16d950ae3704b0f88ed1e39b8aceb6a28d497ce73c357340d45d90"
+      },
+      {
+        "@type": "Other",
+        "label": "350 Million ADA NCL",
+        "uri": "gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q"
+      },
+      {
+        "@type": "Other",
+        "label": "Ace Alliance Voting Rationale for Amaru Treasury Withdrawal 2026",
+        "uri": "ipfs://QmUsyk55hByVuGU8BCTH48fk6rX1jKhQ2JwVpCMTJvyq7e"
+      },
+      {
+        "@type": "RelevantArticles",
+        "label": "Draper Dragon Orion Fund Proposal",
+        "uri": "ipfs://QmPXYnQ65EuKCVPrWfDqFZmiF8Y4PzxZ87XrGs6UaMkNru"
+      },
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Foundation Forum Post",
+        "uri": "https://forum.cardano.org/t/scaling-global-adoption-cardano-and-draper-dragon-partner-for-strategic-80m-fund/152493"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://Qmdzdoqbp2TRgCXKsMAtCRyh5gdWBW26RcwCSp9BpTzX2L"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
