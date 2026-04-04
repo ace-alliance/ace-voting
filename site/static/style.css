@@ -1,0 +1,407 @@
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f8f9fb;
+  --color-border: #e2e6ec;
+  --color-text: #1a1d23;
+  --color-text-muted: #5c6370;
+  --color-primary: #1a3a5c;
+  --color-primary-light: #2a5a8c;
+  --color-accent: #0052ff;
+  --color-constitutional: #16a34a;
+  --color-unconstitutional: #dc2626;
+  --color-abstain: #d97706;
+  --color-did-not-vote: #9ca3af;
+  --color-against: #7c3aed;
+  --max-width: 960px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+.site-header {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header .inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.site-header .logo {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.site-header .logo:hover { text-decoration: none; }
+.site-header nav a {
+  color: rgba(255,255,255,0.85);
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.site-header nav a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 2rem 1.5rem;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+.site-footer a { color: var(--color-text-muted); }
+.site-footer a:hover { color: var(--color-text); }
+
+/* Main content */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Hero */
+.hero {
+  padding: 3rem 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+.hero .cta {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.hero .cta:hover {
+  background: var(--color-primary-light);
+  text-decoration: none;
+}
+
+/* Stats bar */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.stat {
+  text-align: center;
+}
+.stat .number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.stat .label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Section headers */
+.section-title {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* Month group header */
+.month-header {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin: 2rem 0 0.75rem;
+  font-weight: 600;
+}
+
+/* Rationale cards */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  color: var(--color-text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+a.card:hover {
+  border-color: var(--color-primary-light);
+  box-shadow: 0 2px 8px rgba(26,58,92,0.08);
+  text-decoration: none;
+}
+.card .card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.card .card-summary {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.6rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card .card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.card.superseded {
+  opacity: 0.55;
+}
+.card.superseded .card-title::after {
+  content: " (superseded)";
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.badge-constitutional {
+  background: rgba(22,163,74,0.1);
+  color: var(--color-constitutional);
+}
+.badge-unconstitutional {
+  background: rgba(220,38,38,0.1);
+  color: var(--color-unconstitutional);
+}
+.badge-abstain {
+  background: rgba(217,119,6,0.1);
+  color: var(--color-abstain);
+}
+
+/* Vote bar (compact) */
+.vote-bar {
+  display: flex;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 120px;
+  background: var(--color-border);
+}
+.vote-bar span {
+  display: block;
+  height: 100%;
+}
+.vote-bar .seg-constitutional { background: var(--color-constitutional); }
+.vote-bar .seg-unconstitutional { background: var(--color-unconstitutional); }
+.vote-bar .seg-abstain { background: var(--color-abstain); }
+.vote-bar .seg-did-not-vote { background: var(--color-did-not-vote); }
+.vote-bar .seg-against { background: var(--color-against); }
+
+/* Detail page */
+.detail-header {
+  padding: 2rem 0 1rem;
+}
+.detail-header h1 {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.detail-header .gov-action-id {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  word-break: break-all;
+}
+
+/* Vote detail */
+.vote-detail {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.vote-detail h3 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+.vote-detail .vote-bar-large {
+  display: flex;
+  height: 24px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  background: var(--color-border);
+}
+.vote-detail .vote-bar-large span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  min-width: 24px;
+}
+.vote-detail .vote-bar-large .seg-constitutional { background: var(--color-constitutional); }
+.vote-detail .vote-bar-large .seg-unconstitutional { background: var(--color-unconstitutional); }
+.vote-detail .vote-bar-large .seg-abstain { background: var(--color-abstain); }
+.vote-detail .vote-bar-large .seg-did-not-vote { background: var(--color-did-not-vote); }
+.vote-detail .vote-bar-large .seg-against { background: var(--color-against); }
+
+.vote-legend {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+.vote-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.vote-legend .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Content sections */
+.content-section {
+  margin: 2rem 0;
+}
+.content-section h2 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+.content-section .body {
+  line-height: 1.7;
+  color: var(--color-text);
+}
+.content-section .body p { margin-bottom: 1rem; }
+.content-section .body ul, .content-section .body ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+.content-section .body li { margin-bottom: 0.35rem; }
+.content-section .body a { word-break: break-all; }
+.content-section .body strong { font-weight: 600; }
+.content-section .body h1, .content-section .body h2,
+.content-section .body h3, .content-section .body h4 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+
+/* References */
+.references {
+  margin: 2rem 0;
+}
+.references h2 {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+.references ul {
+  list-style: none;
+  padding: 0;
+}
+.references li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+.references li:last-child { border-bottom: none; }
+.ref-label { font-weight: 600; }
+.ref-uri {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+
+/* Source link */
+.source-link {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.88rem;
+}
+
+/* Back link */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .site-header .inner { height: 48px; }
+  .site-header .logo { font-size: 1rem; }
+  .site-header nav a { margin-left: 1rem; font-size: 0.85rem; }
+  .container { padding: 1.25rem 1rem; }
+  .hero { padding: 2rem 0; }
+  .stats { gap: 1.25rem; }
+  .card { padding: 1rem 1.25rem; }
+  .vote-bar { width: 80px; }
+  .vote-legend { font-size: 0.78rem; gap: 0.75rem; }
+}
