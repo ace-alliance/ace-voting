@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1k5vwlfrxtyusd2ec37tckd54gjvqn2kd72xj4t6wkkapdv7zfg0qq468n2r",
+    "summary": "Ace Alliance finds the proposed \"Approve Cardano Foundation as New Managing Entity of Project Catalyst\" Info Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/QmQGshN9UtH8uWitpN3AkZ3Z55WjGRSeXpkXiD29rXmoNu\n\nThis Info Action asks the Cardano community to approve the Cardano Foundation (\"CF\") as the new managing entity of Project Catalyst in place of Input Output Group (\"IOG\"), in accordance with the statutes of the Catalyst Foundation Company (\"CFC\"), a foundation company domiciled in the Cayman Islands that acts as the counterparty to all Catalyst grantees. The proposer states that the CFC's statutes require a Cardano community decision for the transfer of management of Project Catalyst to a new \"Administrator\" to replace IOG. The proposer further states that without community approval by the end of May 2026, Project Catalyst operations will likely face an undetermined pause and the continuation of Project Catalyst is uncertain. The proposer commits, if this Info Action is approved, to work with Intersect to return the previously approved Treasury allocations for Funds 15 and 16 to the Cardano Treasury as quickly as possible, and to ensure continuity for teams delivering against projects in Funds 10–14.\n\nThe action is advisory. It does not, by its ratification, withdraw ADA from the Treasury, alter a protocol parameter, amend the Constitution, or confer any on-chain authority on CF. The constitutional review of an Info Action is correspondingly narrow. Article II.7 (Treasury Withdrawals) does not apply. The relevant provisions are Article II.6 (metadata requirements applicable to all governance actions), Article I (Principles), and any specific guardrails in Appendix I that may be implicated by the subject matter. This action satisfies each:\n\nArticle II.6.1 (Metadata Format). The metadata is served from immutable IPFS (ipfs://QmV9raiDbx8cs5wspNT8EiX5ReusETusVerwQBSrmhrX8N) with a matching anchor hash referenced on-chain (d03e71df06e67693e6b283a5921b124d9505546accec66872b35254d51bdb656), and conforms to CIP-0108. The metadata is additionally signed by the proposer via a CIP-0008 author witness. Post-submission tampering is cryptographically foreclosed.\n\nArticle II.6.2 (Metadata Structure). The CIP-0108 metadata contains a title (\"Approve Cardano Foundation as New Managing Entity of Project Catalyst\"), an abstract, a motivation, a rationale, and a references section, and identifies Cardano Foundation as author with a valid CIP-0008 signature. The structural requirement is satisfied.\n\nAppendix I (Guardrails). No TREASURY, SECURITY, NETWORK, or GOVERNANCE guardrail is engaged by the enactment of this Info Action as drafted, because the action does not withdraw funds, modify a protocol parameter, amend the Constitution, or alter the voting thresholds for any action type.",
+    "precedentDiscussion": "The Constitutional Committee has previously found a series of Info Actions expressing community sentiment on strategic direction to be Constitutional, including \"Defining the Cardano 2030 Vision & Strategy\" (2025-10-21), \"Cardano 2030 Vision, Mission, Strategy Framework and KPIs\" (2026-01-03), and the \"Cardano Critical Integrations Budget\" Info Action (2025-12-25). In each case, the CC's review was limited to metadata and principles compliance because the actions did not, by ratification, execute a constitutional change. We apply that same framework here.\n\nWe note further that the CC has never read Article II.6 as requiring that the CC endorse, or decline to endorse, the underlying policy choice expressed in an Info Action. The CC's role is to assess constitutionality, not optimality. Whether CF is the best choice of managing entity for Project Catalyst, and whether the CFC's statutes contain the best governance design for the program, are substantive questions properly reserved to DReps under the Info Action framework.",
+    "counterargumentDiscussion": "A reviewer might argue that ratification of this Info Action functionally pre-commits the Treasury to CF as a future Catalyst counterparty without further constitutional review. We disagree. An Info Action is, by design, a non-binding community signal. Any subsequent Catalyst funding will require a separate Treasury Withdrawal Governance Action, at which point the full Article II.7 six-requirement showing (terms, prior funding disclosure, net change limit compliance, audits, administrator, and custody) will be evaluated on the merits. Ratification of this Info Action does not foreclose any of those reviews, and nothing in the action text purports to.\n\nA reviewer might further argue that the references section in the CIP-0108 metadata is thin. The proposer has attached a single social-media link rather than publishing the full CFC statutes, board composition, or operational transition plan on-chain. This is a sufficiency-of-disclosure question. The Constitution, in Article II.6, requires a rationale and references, not a particular depth or medium of operational disclosure. The proposer has satisfied the references requirement on its face, has further published a forum post inviting community discussion, and has self-identified and signed the metadata under CIP-0008. The sufficiency of that disclosure is a merit question reserved to DReps.\n\nA reviewer might finally argue that the proposal's stated consequence of inaction, namely that \"the continuation of Project Catalyst is uncertain\" absent community approval by end of May 2026, introduces coercive urgency into a governance process that should operate on deliberative timelines. Ace Alliance notes that the proposer has also stated it \"remains committed to collaborating with stakeholders irrespective of this Info Action's outcome.\" The Constitution does not regulate the framing or tone of proposal text; it regulates the action's metadata, rationale, and effect. The urgency language is not constitutionally disqualifying.",
+    "conclusion": "Ace Alliance finds the proposed \"Approve Cardano Foundation as New Managing Entity of Project Catalyst\" Info Governance Action Constitutional.",
+    "internalVote": {
+      "constitutional": 0,
+      "unconstitutional": 0,
+      "abstain": 2,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmV9raiDbx8cs5wspNT8EiX5ReusETusVerwQBSrmhrX8N"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "d03e71df06e67693e6b283a5921b124d9505546accec66872b35254d51bdb656"
+      },
+      {
+        "@type": "Other",
+        "label": "Forum Post",
+        "uri": "https://forum.cardano.org/t/cardano-foundation-requests-community-approval-as-new-managing-entity-of-project-catalyst/153644"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://QmQGshN9UtH8uWitpN3AkZ3Z55WjGRSeXpkXiD29rXmoNu"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}

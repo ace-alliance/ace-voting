@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1ky2j077de82par6f0hny5q56rpnn5hh0csfhrpzeq3hsk7s6vetqquz3scv",
+    "summary": "Ace Alliance finds the proposed “Pebble + Gerolamo - HLabs 2026 Budget” Treasury Withdrawal Governance Action constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: https://ipfs.io/ipfs/QmZeCtLRDvESgwcj1F3cyMzFnPsVQn1ix7af957tne2JZ6\n\n“Pebble + Gerolamo - HLabs 2026 Budget” (gov_action1ky2j077de82par6f0hny5q56rpnn5hh0csfhrpzeq3hsk7s6vetqquz3scv) is a Treasury Withdrawal Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution.  Article II.6.1 requires governance actions to follow a standardized and legible format, include a URL hosting additional context, and include the hash of an immutable off-chain document such that the on-chain Governance Action matches the final off-chain version. Article II.6.2 further requires sufficient rationale, including at minimum a title, abstract, justification, and relevant supporting materials. Article II.7 then imposes additional requirements for Treasury Withdrawals, including disclosure of purpose, delivery period, costs and expenses, refund conditions, prior treasury funding within the last 24 months, provision for independent audits and oversight metrics, designation of administrators, and separate auditable accounts delegated to the predefined abstain voting option rather than to an SPO.\n\nThis proposal satisfies those standards. It is presented in a structured and legible format with an abstract, motivation, rationale, duration and milestones, budget breakdown, and supporting references. It identifies the funded work with sufficient specificity: maintenance for an upcoming hard fork, a production-ready light node through Gerolamo, and a production-ready imperative smart contract language and tooling through Pebble. It also specifies a 12-month delivery period and states a total budget ask of 8,035,714 ada, derived from a stated 10 FTE annual budget plus a refundable 25% contingency.\n\nThe proposal also satisfies the Treasury Withdrawal-specific requirements of Article II.7. It states the purpose of the withdrawal, the period of delivery, and the relevant costs and expenses. It explains the refundable nature of the contingency and provides for return of unused funds to the Treasury, thereby addressing refund circumstances. It identifies an oversight structure and monitoring mechanism, including an independent oversight board and milestone-based disbursement controls. It also states that funds will be held through a smart-contract escrow arrangement in separate auditable accounts and that such escrowed funds will be delegated to the predefined auto-abstain option rather than to an SPO. These features directly respond to Article II.7.4, II.7.5, and II.7.6.\n\nArticle II.7.2 requires disclosure of whether the prospective recipient has received ada from the Treasury within the last 24 months. The proposal addresses that requirement by referencing prior funding history and retrospective materials. The constitutional requirement is disclosure, and the proposal provides that disclosure through its supporting materials. On the record before us, that is sufficient.\n\nArticle II.7.3 requires that a Net Change Limit be set and that Treasury Withdrawals not exceed that limit. That requirement is satisfied here. We have determined that the 350M ADA Net Change Limit is set and that this 8,035,714 ada requested at this time will not exceed that balance. Once that predicate is established, no remaining defect appears under Article II.7. The action therefore satisfies the constitutional guardrails applicable to Treasury Withdrawals.",
+    "precedentDiscussion": "None",
+    "counterargumentDiscussion": "A reasonable counterargument arises from Article II.7.4 and II.7.5 of the Constitution, which require Treasury Withdrawals to include an allocation for periodic independent audits and oversight metrics, and to designate one or more administrators responsible for monitoring how funds are used and whether deliverables are achieved. Although the proposal names three independent reviewers, it does not establish a formal audit relationship among them, define a common audit methodology, or explain in concrete terms how they will coordinate their work to monitor spending, verify milestone completion, and report their findings. It is therefore possible to argue that, while the proposal identifies people who are intended to provide oversight, it leaves unclear whether that oversight will operate as a coherent and periodic audit process of the kind Article II.7 appears to contemplate.\n\nThe constitutional response is that Article II.7 requires provision for periodic independent audits and the implementation of oversight metrics, but it does not prescribe any particular institutional form, auditing standard, or coordination procedure that such oversight must take. The Constitution sets a floor, not a detailed governance manual. It requires that Treasury Withdrawal proposals include independent oversight and administrators responsible for monitoring funds and deliverables, but it leaves the Cardano Community and its DReps the responsibility to judge whether the specific oversight model proposed in a given case is strong enough to merit approval. Therefore, we do not believe that this concern rises to the level of constitutional consideration.",
+    "conclusion": "Ace Alliance finds the proposed “Pebble + Gerolamo - HLabs 2026 Budget” Governance Action constitutional.",
+    "internalVote": {
+      "constitutional": 3,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmNuDfoojLyBNqk7qEXjd4UvZUKRX5aALjRUydrrr1pxWb"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "09a9d51df80d12097227fc010657f190fb5d71fe75aa020335b04be07b8e3efd"
+      },
+      {
+        "@type": "Other",
+        "label": "Rationale PDF",
+        "uri": "ipfs://QmZeCtLRDvESgwcj1F3cyMzFnPsVQn1ix7af957tne2JZ6"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
