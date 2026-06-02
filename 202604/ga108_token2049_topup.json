@@ -1,0 +1,115 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "authors": {
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@context": {
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature",
+            "witnessAlgorithm": "CIP100:witnessAlgorithm"
+          },
+          "@id": "CIP100:witness"
+        }
+      },
+      "@id": "CIP100:authors"
+    },
+    "body": {
+      "@context": {
+        "conclusion": "CIP136:conclusion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "govActionId": "CIP129:governance-action-identifiers",
+        "internalVote": {
+          "@container": "@set",
+          "@context": {
+            "abstain": "CIP136:abstain",
+            "againstVote": "CIP136:againstVote",
+            "constitutional": "CIP136:constitutional",
+            "didNotVote": "CIP136:didNotVote",
+            "unconstitutional": "CIP136:unconstitutional"
+          },
+          "@id": "CIP136:internalVote"
+        },
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "references": {
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "RelevantArticles": "CIP136:RelevantArticles",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri"
+          },
+          "@id": "CIP100:references"
+        },
+        "summary": "CIP136:summary"
+      },
+      "@id": "CIP136:body"
+    },
+    "hashAlgorithm": "CIP100:hashAlgorithm"
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance",
+      "witness": {
+        "publicKey": "",
+        "signature": "",
+        "witnessAlgorithm": "Ed25519"
+      }
+    }
+  ],
+  "body": {
+    "conclusion": "Ace Alliance finds the proposed \"Cardano at TOKEN2049 Singapore 2026: Top-Up ‘Title’ Sponsorship Upgrade\" Treasury Withdrawals Governance Action Constitutional.",
+    "counterargumentDiscussion": "A reviewer might argue that the dependency on a separate governance action creates a constitutional ambiguity, since the Top-Up could in principle be enacted on-chain while the Baseline is rejected, leaving Cardano with funds disbursed for an \"upgrade\" with nothing to upgrade. The proposal addresses this directly through a stated refund commitment: in that scenario, EMURGO returns 100 percent of the funds to the Treasury within 30 days of enactment. Under Article II.7.1, the Constitution requires that refund circumstances be specified; it does not require that disbursement and dependency be sequenced atomically on-chain. The enumerated refund condition is responsive to the requirement, and the administrative pattern (Intersect TRSC custody, auto-abstain delegation, milestone-gated PSSC funding) provides the operational mechanism to execute the return.\n\nA reviewer might further argue that the 3 percent Compliance and Governance allocation (USD 12,000) is smaller in absolute terms than the corresponding allocation in the Baseline ‘Platinum’ proposal, and that this raises a question under Article II.7.4. The Constitution requires that ada be allocated from the withdrawal to cover periodic independent audits and the implementation of oversight metrics; it does not prescribe a minimum percentage or dollar figure. The Top-Up preserves the same 3 percent ratio applied in the Baseline proposal and inherits the same dashboard, post-event reporting, and Oversight Committee mechanisms. The proposer's decision to omit a duplicate management fee on the Top-Up (on the basis that operational management is already funded under the Baseline) is a budgeting choice, not a constitutional deficiency.\n\nA reviewer might further argue that the booth-and-event \"pass-through\" framing, combined with the incremental nature of the Top-Up scope, leaves substantial discretion to EMURGO over vendor selection and on-the-ground execution. The Constitution does not require granular vendor disclosure at the proposal stage; it requires a stated purpose, period, costs, refund terms, audit allocation, named administrator, and custody safeguards. Those elements are present, and post-event accountability is enforced through the milestone structure and the public dashboard. Whether the marginal value unlocked by the ‘Title’ tier (mainstage keynote, lanyard branding, media introductions) justifies the incremental USD 424,360 in pass-through cost is a policy and value-for-money question reserved to DReps, not a constitutional question for the Constitutional Committee.",
+    "govActionId": "gov_action1kj6ghzuz9wcq88f3y72cyyeekdcemlq0dqk4zpjd4eck5assuypqq0pckkw",
+    "internalVote": {
+      "abstain": 0,
+      "againstVote": 0,
+      "constitutional": 5,
+      "didNotVote": 0,
+      "unconstitutional": 0
+    },
+    "rationaleStatement": "This Treasury Withdrawals Governance Action (TWGA) requests 1,768,167 ada (approximately USD 424,360 at an assumed rate of USD 0.24 per ada) as a modular top-up that, if combined with the separately submitted Baseline ‘Platinum’ Sponsorship Proposal, upgrades Cardano's TOKEN2049 Singapore 2026 presence from a ‘Platinum’ to a ‘Title’ sponsorship. The incremental scope covers a 15-minute mainstage keynote, expansion of the booth footprint from 108 sqm to 144 sqm, lanyard and protein-shake-station branding, press release inclusion, facilitated media introductions, and additional access invitations. EMURGO is named as the operational facilitator and direct recipient of pass-through funds, with Intersect designated as the administrator operating on behalf of the Cardano Development Holdings (CDH). The withdrawal flows to Intersect's 2025 Treasury Reserve Smart Contract (TRSC), thereafter to a Project-Specific Smart Contract (PSSC) for EMURGO, with a single-milestone disbursement structure. The proposal is explicitly contingent on the approval of the Baseline ‘Platinum’ TWGA (`gov_action18u8lpkzge2csxe3plynn9lh4agwtv3nrqkyfwalwj4ykjv7l68jqqzmul9z`); EMURGO commits to a 100 percent refund to the Treasury within 30 days of enactment in the event the Baseline action does not pass. Our review concerns the constitutionality of the action as posted, not the merits of the underlying sponsorship strategy or the negotiated commercial terms.\n\nUnder Article II.6, governance actions must use a standardized format, include an immutable URL and hash, and provide sufficient rationale. This TWGA satisfies these requirements.\n\n**Article II.6.1 (Metadata Format).** The metadata is served from immutable IPFS (`ipfs://bafkreifl24qjwnj4qa2vqaun3wfwg7z4lzcgg3okdpdbqoa4oiouwfwdsi`) with a matching anchor hash referenced on-chain (`a235127bf795ab8f141a9e115f79fe9102ed5ec086135ea0c3e087b9e2d61a92`), and conforms to CIP-0108. Content-addressed IPFS storage forecloses post-submission alteration.\n\n**Article II.6.2 (Metadata Structure).** The metadata contains a title, abstract, motivation, rationale, an explicit constitutional self-assessment, a budget breakdown limited to the price delta between the ‘Platinum’ baseline and ‘Title’ upgrade tiers, a tier-comparison table, key performance indicators incremental to those of the Baseline proposal, and risk and mitigation discussion that addresses the dependency on the Baseline action.\n\nUnder Article II.7, TWGAs must meet six specific requirements. This TWGA satisfies all of them.\n\n**Article II.7.1 (Terms of the Withdrawal).** Purpose is stated (upgrading the TOKEN2049 sponsorship tier to ‘Title’, unlocking the mainstage keynote, expanded booth, branding upgrades, and media access). The delivery period is specified (October 7 to 8, 2026, with a post-event report committed within 60 days). Relevant costs are itemized as the price delta only: ‘Title’ Sponsorship Upgrade USD 300,000, additional booth build and logistics USD 100,000, Compliance and Governance at 3 percent USD 12,000, plus Intersect's 3 percent administrative fee of USD 12,360, totaling USD 424,360. The proposer explicitly excludes a duplicate management fee, noting that operational management is already funded under the Baseline TWGA. Refund circumstances are enumerated across four cases: failure of the Baseline ‘Platinum’ proposal to pass (100 percent return within 30 days of enactment), cancellation of TOKEN2049 before vendor payments are due, surplus from unspent ada returned within six months, and surplus arising from ada price appreciation returned within six months.\n\n**Article II.7.2 (Prior Funding Disclosure).** EMURGO discloses two prior 2025 Treasury receipts: the \"Unveiling the First Unified Global Events Marketing Strategy for Cardano\" TWGA (still in delivery for activities scheduled in 2026) and the \"Cardano Summit 2025 and regional tech events\" TWGA (India Hackathon component, reported as having met KPIs). The Constitution requires disclosure, not absence, of prior funding; the disclosure obligation is satisfied.\n\n**Article II.7.3 (Net Change Limit Compliance).** A 350,000,000 ada NCL covering epochs 613 to 713 is in force. The 1,768,167 ada requested here is well within that headroom. The proposer also discloses the combined scenario in which both this Top-Up and the Baseline ‘Platinum’ Proposal pass simultaneously (5,071,917 ada combined), which remains well within the remaining NCL balance.\n\n**Article II.7.4 (Audits and Oversight).** The budget allocates USD 12,000 (3 percent) for legal review, audit provisions, and tax compliance. The proposal additionally commits to a public Intersect dashboard tracking on-chain TRSC and PSSC state, milestone disbursements, and KPI delivery, and to a post-event report within 60 days. These provisions satisfy the requirement that ada be allocated for periodic independent audits and that oversight metrics be implemented. The Constitution requires that ada be allocated; it does not prescribe a minimum percentage.\n\n**Article II.7.5 (Administrator).** The proposal designates Intersect as administrator, operating on behalf of the CDH under a forthcoming legal agreement. Intersect's published administrative structure (three administrative roles, two leadership roles, and a five-member external Oversight Committee composed of Sundae Labs, the Cardano Foundation, DQuadrant, Xerberus, and NMKR) is referenced and is consistent with the administrator-plus-oversight pattern previously accepted by the Constitutional Committee.\n\n**Article II.7.6 (Custody).** Withdrawn ada flows to the Intersect 2025 TRSC at stake address `stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr`, with later migration to a 2026 TRSC and downstream funding of a project-specific PSSC for EMURGO. The proposal states explicitly that neither the TRSC nor the PSSCs will be delegated to an SPO; both are delegated to the predefined auto-abstain DRep; this has been confirmed. The Sundae Labs treasury contract architecture has been audited by TxPipe and MLabs, with a mainnet validation transaction (`0f591dc544ae14102dbb4a74d5311a6acffc1772b163d8b7a9656b9525950b17`) referenced for public verification. Funds remain auditable by the Cardano Community for the duration of administration.\n\n**Appendix I (Guardrails).** TREASURY-01a: the 350M ada NCL was set on-chain by the DReps via the \"Net Change Limit (Epoch 613 to Epoch 713)\" Info Action, treated as definitively set per our precedent. TREASURY-02a: the 1,768,167 ada requested does not exceed the 350M ada NCL, and remains within the remaining NCL balance in the combined scenario where both the Baseline ‘Platinum’ and this Top-Up are enacted. TREASURY-03a: the withdrawal is denominated in ada.",
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreifl24qjwnj4qa2vqaun3wfwg7z4lzcgg3okdpdbqoa4oiouwfwdsi"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "a235127bf795ab8f141a9e115f79fe9102ed5ec086135ea0c3e087b9e2d61a92"
+      },
+      {
+        "@type": "Other",
+        "label": "Baseline ‘Platinum’ dependency action",
+        "uri": "gov_action18u8lpkzge2csxe3plynn9lh4agwtv3nrqkyfwalwj4ykjv7l68jqqzmul9z"
+      },
+      {
+        "@type": "Other",
+        "label": "Sundae Labs Treasury Contracts (audited)",
+        "uri": "https://github.com/SundaeSwap-finance/treasury-contracts"
+      },
+      {
+        "@type": "Other",
+        "label": "Net Change Limit (Epoch 613 to Epoch 713)",
+        "uri": "gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q"
+      }
+    ],
+    "summary": "Ace Alliance finds the proposed \"Cardano at TOKEN2049 Singapore 2026: Top-Up ‘Title’ Sponsorship Upgrade\" Treasury Withdrawals Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/"
+  },
+  "hashAlgorithm": "blake2b-256"
+}

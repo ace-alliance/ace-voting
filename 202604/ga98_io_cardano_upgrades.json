@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "authors": {
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@context": {
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature",
+            "witnessAlgorithm": "CIP100:witnessAlgorithm"
+          },
+          "@id": "CIP100:witness"
+        }
+      },
+      "@id": "CIP100:authors"
+    },
+    "body": {
+      "@context": {
+        "conclusion": "CIP136:conclusion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "govActionId": "CIP129:governance-action-identifiers",
+        "internalVote": {
+          "@container": "@set",
+          "@context": {
+            "abstain": "CIP136:abstain",
+            "againstVote": "CIP136:againstVote",
+            "constitutional": "CIP136:constitutional",
+            "didNotVote": "CIP136:didNotVote",
+            "unconstitutional": "CIP136:unconstitutional"
+          },
+          "@id": "CIP136:internalVote"
+        },
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "references": {
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "RelevantArticles": "CIP136:RelevantArticles",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri"
+          },
+          "@id": "CIP100:references"
+        },
+        "summary": "CIP136:summary"
+      },
+      "@id": "CIP136:body"
+    },
+    "hashAlgorithm": "CIP100:hashAlgorithm"
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance",
+      "witness": {
+        "publicKey": "",
+        "signature": "",
+        "witnessAlgorithm": "Ed25519"
+      }
+    }
+  ],
+  "body": {
+    "conclusion": "Ace Alliance finds the proposed \"IO: Cardano Upgrades\" Treasury Withdrawals Governance Action Constitutional.",
+    "counterargumentDiscussion": "A reviewer might argue that the Article II.7.4 audit allocation is not finely itemised at the line-item level and that Intersect holds overlapping roles as administrator, controller of the Treasury Reserve Smart Contract, and counterparty to the legal contract on behalf of Cardano Development Holdings. Neither concern rises to a constitutional violation. Article II.7.4 requires an allocation of ada for periodic independent audits and the implementation of oversight metrics, both of which are present through the Security and Audits line, the third-party Assurer, and the public milestone dashboard. Article II.7.5 expressly contemplates an administrator monitoring fund use and ensuring deliverables, and the Oversight Committee structure provides the checks Article II.7.5 anticipates. Both observations are merit and design questions reserved to DReps.\n\nA reviewer might further argue that bundling three technically distinct workstreams into a single Treasury Withdrawals action is awkward governance hygiene, particularly since Workstream 2 depends on Workstream 1 and Babel Fees depends on the separately funded CIP-118 Nested Transactions primitive. Article II.7 requires itemised costs and a stated delivery period, both of which are provided at the workstream and category level. Whether the workstreams should have been submitted as separate actions is a value and process question for DReps, not a constitutionality question.",
+    "govActionId": "gov_action1w0shrfxqwv95kk0v4cn34wylz25a2cmqkq5jpc0e2yrahhqava3qz6es0cp",
+    "internalVote": {
+      "abstain": 2,
+      "againstVote": 0,
+      "constitutional": 3,
+      "didNotVote": 0,
+      "unconstitutional": 0
+    },
+    "rationaleStatement": "\"IO: Cardano Upgrades\" is a Treasury Withdrawals Governance Action requesting 13,103,039 ada to fund three coordinated platform workstreams delivered by Input Output in collaboration with Ensurable Systems: CIP-159 Account Address Enhancement (7,069,985 ada), CPS-23 Multi-Asset Treasury design (2,356,662 ada), and Babel Fees (3,676,392 ada). The delivery period spans Q3 2026 through Q2 2027. Funds will be administered by Intersect on behalf of Cardano Development Holdings, routed through Sundae Labs Treasury Reserve Smart Contract (stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr) with Project-Specific Smart Contracts for disbursement. Input Output is the proposer; the same constitutional standard applies as to any other proposer. The constitutional review scope is Article II, Section 6 and Article II, Section 7, together with the Appendix I TREASURY guardrails.\n\n**Article II.6.1 (Metadata Format).** Metadata is anchored on IPFS at QmeNzwKE9bMyr65E4Dxtvoji7WBbazXUVykqQWq1pHXZvQ with matching on-chain anchor hash 2289200a99552eb3cc4fba5791a0d8c700adf48f3f84ad3d039b781d6c1cd871 (recomputed and confirmed), ensuring immutability. The document conforms to CIP-0108.\n\n**Article II.6.2 (Metadata Structure).** Title, abstract, motivation, rationale, KPI alignment, deliverables roadmap, budget breakdown, risk register, and treasury governance and compliance materials are present and substantive. Sufficient.\n\n**Article II.7.1 (Terms of the Withdrawal).** Purpose stated: three workstreams covering CIP-159 ledger primitives for account-address enhancement, CPS-23 design work for a multi-asset Cardano Treasury, and a Babel Fees service permitting transaction fees to be paid in native assets. Delivery period: Q3 2026 through Q2 2027 with itemised quarterly milestones. Amount: 13,103,039 ada, broken down both by workstream (7,069,985 / 2,356,662 / 3,676,392) and by funding category (development, infrastructure, security and audits, legal and compliance, engagement and ecosystem support, operations and delivery, governance, other). Refund conditions are stated: undisbursed funds at the end of the delivery period are returned to the Cardano Treasury, partial delivery or scope reduction triggers proportional return of unspent funds associated with cancelled or reduced deliverables, and a final reconciliation will be published as part of the oversight reporting cycle.\n\n**Article II.7.2 (Prior Funding Disclosure).** Input Output and its affiliated entities disclose 130,708,860 ada allocated across prior treasury workstreams (Blockfrost, Catalyst, IOE, IOR, Governance), of which 78,459,777 ada has been withdrawn to date, with on-chain references for each workstream tied to the corresponding governance action.\n\n**Article II.7.3 (Net Change Limit Compliance).** A 350,000,000 ada Net Change Limit is active for Epochs 613 to 713. The 13,103,039 ada ask is well within the applicable NCL, satisfying guardrail TREASURY-02a.\n\n**Article II.7.4 (Audits and Oversight).** The proposal carries a dedicated Security and Audits line within the funding breakdown and funds an independent third-party Assurer responsible for reviewing and signing off milestone deliverables against the legal contract. Intersect's delivery assurance function provides administrator-side oversight, and a public on-chain dashboard exposes TRSC and PSSC activity for community audit. Both the periodic independent audit requirement and the oversight metrics requirement are satisfied.\n\n**Article II.7.5 (Administrator).** Intersect is designated as administrator, acting on behalf of Cardano Development Holdings and responsible for monitoring fund use and milestone-based disbursement. A five-member Oversight Committee (Sundae Labs, Cardano Foundation, Dquadrant, Xerberus, NMKR) provides independent checks against unilateral administrator action.\n\n**Article II.7.6 (Custody).** Funds are held in Sundae Labs Treasury Reserve and Project-Specific Smart Contracts (stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr), are not staked with any SPO, and are delegated to the predefined abstain voting option (auto-abstain DRep). Accounts are publicly auditable on-chain.\n\n**Appendix I (Guardrails).** TREASURY-02a: the ask is within the applicable Net Change Limit. TREASURY-03a: denominated in ada, with USD figures provided for reference only. Other TREASURY items are not engaged.",
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmeNzwKE9bMyr65E4Dxtvoji7WBbazXUVykqQWq1pHXZvQ"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "2289200a99552eb3cc4fba5791a0d8c700adf48f3f84ad3d039b781d6c1cd871"
+      }
+    ],
+    "summary": "Ace Alliance finds the proposed \"IO: Cardano Upgrades\" Treasury Withdrawals Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/"
+  },
+  "hashAlgorithm": "blake2b-256"
+}

@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "authors": {
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@context": {
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature",
+            "witnessAlgorithm": "CIP100:witnessAlgorithm"
+          },
+          "@id": "CIP100:witness"
+        }
+      },
+      "@id": "CIP100:authors"
+    },
+    "body": {
+      "@context": {
+        "conclusion": "CIP136:conclusion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "govActionId": "CIP129:governance-action-identifiers",
+        "internalVote": {
+          "@container": "@set",
+          "@context": {
+            "abstain": "CIP136:abstain",
+            "againstVote": "CIP136:againstVote",
+            "constitutional": "CIP136:constitutional",
+            "didNotVote": "CIP136:didNotVote",
+            "unconstitutional": "CIP136:unconstitutional"
+          },
+          "@id": "CIP136:internalVote"
+        },
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "references": {
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "RelevantArticles": "CIP136:RelevantArticles",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri"
+          },
+          "@id": "CIP100:references"
+        },
+        "summary": "CIP136:summary"
+      },
+      "@id": "CIP136:body"
+    },
+    "hashAlgorithm": "CIP100:hashAlgorithm"
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance",
+      "witness": {
+        "publicKey": "",
+        "signature": "",
+        "witnessAlgorithm": "Ed25519"
+      }
+    }
+  ],
+  "body": {
+    "conclusion": "For these reasons, Ace Alliance finds the proposed \"IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability\" Treasury Withdrawals Governance Action constitutional under Article II.6.1 and Article II.7.1 through II.7.6.",
+    "counterargumentDiscussion": "A reasonable counterargument arises from Article II.7.1, which requires specification of \"the purpose of the withdrawal\" and \"the relevant costs and expenses of the proposed activities.\" Several of Workstream 1's deliverables turn on facts the proposer does not control at submission: the on-chain cost and expressiveness benefits require a future hard fork that has not been submitted to or ratified by the community, and a SNARK-friendly Poseidon hash deliverable is anchored to an unratified CIP-0168 (graded \"High\" for rework risk by the proposer itself) and conditional on internal benchmarks. On this reading, where the funded scope is partly contingent on downstream votes and in-flight specification work, the specification floor of Article II.7.1 is arguably unmet at submission. We acknowledge that this argument has force.\n\nWe reject that view on these facts. Iterative improvement of the Plutus platform alongside upcoming protocol upgrades and in-flight CIP work is the kind of ordinary maturation the Constitution accommodates rather than forbids. The proposal does not conceal its dependencies; it discloses each, classifies the rework risk, and ships the formal-specification, conformance, security, and developer-experience deliverables independently of any hard fork. The Administrator architecture is the constitutional answer to whatever contingency remains: under the milestone-based PSSC framework, Intersect pauses disbursement on missed milestones and unspent ada returns to the Cardano Treasury under the Refund Conditions. The Constitution sets a floor, not a project-management manual, and contingency disclosed transparently and bounded by Administrator-controlled disbursement is governance design, not a constitutional defect.\n\nA second counterargument arises from Article II.7.1 and Article II.7.5. The proposal characterizes itself as a co-venture between Input Output and VacuumLabs reflecting \"core infrastructure maintained by a consortium of expert teams, not dependent on any single contributor.\" The Legal Contract, however, is between Input Output and Cardano Development Holdings; VacuumLabs appears in the Resources section's headcount allocation rather than as a co-signatory. The \"distributed stewardship\" framing arguably overstates the structural distribution the operational instruments establish. We acknowledge that this argument has force.\n\nWe reject that view on these facts. Article II.7 does not require every delivery counterparty to appear as a co-signatory on the legal contract that anchors administration, and VacuumLabs's work is named at the engineering-role level in the Resources section. The Administrator architecture flowing through Intersect and Cardano Development Holdings, with milestone-based PSSC disbursement and an independent five-member Oversight Committee, is what Article II.7.5 directs us to evaluate, and on the record before us it satisfies that requirement. Whether a two-party co-venture is industrially distributed enough to merit the spend is a question for DReps.",
+    "govActionId": "gov_action1w0shrfxqwv95kk0v4cn34wylz25a2cmqkq5jpc0e2yrahhqava3qvczhx6t",
+    "internalVote": {
+      "abstain": 2,
+      "againstVote": 0,
+      "constitutional": 3,
+      "didNotVote": 0,
+      "unconstitutional": 0
+    },
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmTe4YXcU69Fhtx3sciKRg34y9NvB3SjSdPXwEqhaKXhqL\n\n\"IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability\" (gov_action1w0shrfxqwv95kk0v4cn34wylz25a2cmqkq5jpc0e2yrahhqava3qvczhx6t) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution.\n\nThis TWGA seeks to withdraw ₳11,877,575 from the Cardano Treasury to fund three connected workstreams strengthening the Plutus smart contract platform: an expansion of UPLC capabilities and primitives, including casing on the built-in Data type, additional BuiltinValue functions, the multiIndexArray builtin, an investigation of the redundant scope check, and a SNARK-friendly hash CIP with C bindings conditional on benchmarks; a formal-specification, conformance, and security workstream, including a property-based conformance testing framework, an Agda formalization of programmatic built-ins, and a systematic security audit of the evaluator and costing code; and a developer-experience workstream improving the compiler architecture, error reporting, and project setup. Delivery runs from Q3 2026 through Q2 2027, with the work delivered as a co-venture between Input Output and VacuumLabs. Funds are directed into Intersect's 2025 Treasury Reserve Smart Contract (stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr), administered by Intersect on behalf of Cardano Development Holdings.\n\nThe procedural standards of Article II.6 are satisfied: the proposal anchors to an IPFS-hosted document with the on-chain blake2b-256 hash, a content-addressed form \"immutable and incapable of being altered after submission,\" and the metadata provides the title, abstract, justification, and supporting materials required by II.6.2.\n\nThe substantive Article II.7 requirements are met as well. Under Article II.7.1, \"Treasury Withdrawals actions must specify the terms of the withdrawal,\" and the proposal specifies the purpose (three named workstreams), period (Q3 2026 through Q2 2027 with milestone-level dates), itemized costs (across development, infrastructure, security and audits, legal and compliance, ecosystem engagement, operations and delivery, governance, and other line items), and refund circumstances (end-of-period sweep and proportional return on cancelled or reduced deliverables). The disclosure requirement of Article II.7.2 is met by a Prior Treasury Receipts section stating aggregate prior allocations of ₳130,708,860 and prior withdrawals of ₳78,459,777 across IO and affiliated entities. The 350M Net Change Limit covering Epoch 613 to Epoch 713 is set, and this ₳11,877,575 ask does not exceed it, satisfying Article II.7.3 and Appendix I guardrail TREASURY-02a.\n\nA 3rd Party Assurer funded as part of the withdrawal supports milestone acceptance, satisfying the periodic independent audit and oversight allocation under Article II.7.4. Article II.7.5 is satisfied by Intersect's designation as Administrator, acting on behalf of Cardano Development Holdings, operating through the TRSC and PSSC framework with milestone-based disbursement controls and a five-member external Oversight Committee (Sundae Labs, Cardano Foundation, Dquadrant, Xerberus, NMKR). The custody requirement of Article II.7.6 is satisfied by the proposal's commitment that the TRSC stake account uses auto-abstain DRep delegation, with PSSC creation on Legal Contract readiness, milestones recorded in metadata, and a community-audit dashboard, on the same Intersect TRSC pattern we have accepted as constitutional in prior actions in this family.",
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmPkZ6Azo1tJfWVRjwn8G1Qk7k1SC3Vk3L21WFPSracCzg"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "4017fa52b940d6b6545266e03532c9becb2f1681d4c0429a2d06d256dfd8eba4"
+      }
+    ],
+    "summary": "Ace Alliance finds the proposed \"IO & VacuumLabs: Enhancing Plutus - Performance, Correctness, and Usability\" Treasury Withdrawals Governance Action constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/"
+  },
+  "hashAlgorithm": "blake2b-256"
+}
