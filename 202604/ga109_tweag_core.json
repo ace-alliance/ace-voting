@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "authors": {
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@context": {
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature",
+            "witnessAlgorithm": "CIP100:witnessAlgorithm"
+          },
+          "@id": "CIP100:witness"
+        }
+      },
+      "@id": "CIP100:authors"
+    },
+    "body": {
+      "@context": {
+        "conclusion": "CIP136:conclusion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "govActionId": "CIP129:governance-action-identifiers",
+        "internalVote": {
+          "@container": "@set",
+          "@context": {
+            "abstain": "CIP136:abstain",
+            "againstVote": "CIP136:againstVote",
+            "constitutional": "CIP136:constitutional",
+            "didNotVote": "CIP136:didNotVote",
+            "unconstitutional": "CIP136:unconstitutional"
+          },
+          "@id": "CIP136:internalVote"
+        },
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "references": {
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "RelevantArticles": "CIP136:RelevantArticles",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri"
+          },
+          "@id": "CIP100:references"
+        },
+        "summary": "CIP136:summary"
+      },
+      "@id": "CIP136:body"
+    },
+    "hashAlgorithm": "CIP100:hashAlgorithm"
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance",
+      "witness": {
+        "publicKey": "",
+        "signature": "",
+        "witnessAlgorithm": "Ed25519"
+      }
+    }
+  ],
+  "body": {
+    "conclusion": "For these reasons, Ace Alliance finds the proposed \"Tweag Core Cardano Infrastructure: Treasury Withdrawal 2026-2028\" Treasury Withdrawals Governance Action constitutional under Article II.6.1 and Article II.7.1 through II.7.6.",
+    "counterargumentDiscussion": "A reasonable counterargument arises from Article II.7.1 and is directed at the proposal's express framing as \"a single delivery pipeline, not a modular menu.\" Where a Treasury Withdrawal binds the community to an up-or-down vote on seventeen heterogeneous work packages spanning correctness scaffolding, protocol-upgrade work, node-economics changes, and developer tooling, the per-component costs-and-expenses specification of Article II.7.1 is arguably burdened, because the community cannot decline lower-priority components without also declining the core infrastructure work the same withdrawal funds. We acknowledge that this argument has surface force.\n\nWe reject that view on these facts. Proposers have flexibility in how they structure treasury requests; some will split workstreams into distinct TWGAs, others will consolidate where the components share engineering preconditions or delivery infrastructure. Article II.7.1 requires specification of the purpose, period, costs, and refund terms of the withdrawal, and the proposal supplies each at the level the provision sets. Whether a single-pipeline structure is the better governance design is a question for DReps, not a constitutional defect.\n\nA second counterargument arises from Article II.7.1 and is directed at the proposal's Peras deliverables, several of which presuppose the successful enactment of one or more future Hard Fork Initiation governance actions the Constitutional Committee has not yet evaluated. Where a withdrawal's headline outcome depends on a downstream vote outside the proposer's gift, the withdrawal's purpose at submission is arguably indeterminate, because the share of the withdrawal attributable to that outcome will, in the event of non-ratification, have purchased only the scaffolding for an upgrade the network did not adopt. We acknowledge that this argument has force.\n\nWe reject that view on these facts. The Cardano ecosystem should expect ongoing software upgrades, and the proposer specifies its purpose at the appropriate level: production-grade, ready-for-activation deliverables (merged code, reproducible releases, runbooks, benchmarks, and governance-action packages) that make a downstream upgrade feasible. Under the TRSC framework, the Administrator controls disbursement milestone-by-milestone and would pause funds and return them to the Treasury if the requisite conditions were not met. Article II.7.1 is satisfied where the funded scope is specified at submission and the administrator architecture remains capable of arresting performance that does not meet the agreed milestones.\n\nA further observation, rather than a freestanding counterargument, concerns the form of the Article II.7.2 prior-receipts disclosure. The proposer's disclosure is brief and aggregate. The Constitution requires disclosure, not a particular reporting schema; the proposal discloses, and that is what Article II.7.2 requires.",
+    "govActionId": "gov_action14u26vcn3wmcnhc5pqrt6494ypugr7c7f3e2ns60r32cntl6zjtxsqqgeu8p",
+    "internalVote": {
+      "abstain": 0,
+      "againstVote": 0,
+      "constitutional": 5,
+      "didNotVote": 0,
+      "unconstitutional": 0
+    },
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmbR73KEMZdi6cD1mrgBeJ2VcvhQCwe4B4Qrf8B1DioLo9\n\n\"Tweag Core Cardano Infrastructure: Treasury Withdrawal 2026-2028\" (gov_action14u26vcn3wmcnhc5pqrt6494ypugr7c7f3e2ns60r32cntl6zjtxsqqgeu8p) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution.\n\nThis TWGA seeks to withdraw ₳39,787,316 from the Cardano Treasury to fund Tweag's delivery of seventeen interdependent work packages across nine core Cardano infrastructure areas, including production-grade mainnet delivery of Peras v1 and Peras v2, History Expiry for sustainable node economics, a Hard Fork Mempool Bridger, conformance and mutation testing, adversarial fork testing, Canonical Ledger State and Mithril work, Plutus Script Re-Executor tooling, Hoarding Node deployment, block-cost investigation, and ongoing maintenance of the Genesis Sync Accelerator and Cardano Node Emulator. Delivery runs across 2026 through 2028. Funds are directed into Intersect's 2025 Treasury Reserve Smart Contract (stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr), with subsequent migration to a 2026 TRSC once established, and the withdrawal is administered by Intersect on behalf of Cardano Development Holdings.\n\nThe procedural standards of Article II.6 are satisfied: the proposal anchors to an IPFS-hosted document with the on-chain blake2b-256 hash, a content-addressed form \"immutable and incapable of being altered after submission,\" and the metadata provides the title, abstract, justification, and supporting materials required by II.6.2.\n\nThe substantive Article II.7 requirements are met as well. Under Article II.7.1, \"Treasury Withdrawals actions must specify the terms of the withdrawal,\" and the proposal specifies the purpose (seventeen interdependent core Cardano infrastructure work packages), period (2026 through 2028), itemized costs (derived from an average market rate of $176/hour for senior Cardano infrastructure engineers at a conservative ADA/USD conversion of 0.25), and refund circumstances (end-of-period sweep and proportional return on cancelled or reduced deliverables). The disclosure requirement of Article II.7.2 is met by an aggregate disclosure of ₳11,070,322.68 allocated within the Treasury Smart Contract (ID 680d1b63565577986442d24e). The 350M Net Change Limit covering Epoch 613 to Epoch 713 is set, and this ₳39,787,316 ask does not exceed it, satisfying Article II.7.3 and Appendix I guardrail TREASURY-02a.\n\nA 3rd Party Assurer funded as part of the withdrawal supports milestone acceptance, satisfying the periodic independent audit and oversight allocation under Article II.7.4. Article II.7.5 is satisfied by Intersect's designation as Administrator, acting on behalf of Cardano Development Holdings, operating through the TRSC and PSSC framework with milestone-based disbursement controls and a five-member external Oversight Committee (Sundae Labs, Cardano Foundation, Dquadrant, Xerberus, NMKR). The custody requirement of Article II.7.6 is satisfied by the proposal's commitment that TRSC and PSSC instances are non-staked with an SPO and delegated to the auto-abstain predefined DRep, with a community-audit dashboard, on the same Intersect TRSC pattern we have accepted as constitutional in prior actions in this family.",
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreifdoitcxw4anxadosoqi5y5ny647hym4u62gpyvkkuyg7wpnq6gbi"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "7771fcc347a1d28888a0b53fa84821302f0259449d3327de693dbe66295e9b60"
+      }
+    ],
+    "summary": "Ace Alliance finds the proposed \"Tweag Core Cardano Infrastructure: Treasury Withdrawal 2026-2028\" Treasury Withdrawals Governance Action constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/"
+  },
+  "hashAlgorithm": "blake2b-256"
+}

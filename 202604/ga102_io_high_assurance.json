@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "authors": {
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@context": {
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature",
+            "witnessAlgorithm": "CIP100:witnessAlgorithm"
+          },
+          "@id": "CIP100:witness"
+        }
+      },
+      "@id": "CIP100:authors"
+    },
+    "body": {
+      "@context": {
+        "conclusion": "CIP136:conclusion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "govActionId": "CIP129:governance-action-identifiers",
+        "internalVote": {
+          "@container": "@set",
+          "@context": {
+            "abstain": "CIP136:abstain",
+            "againstVote": "CIP136:againstVote",
+            "constitutional": "CIP136:constitutional",
+            "didNotVote": "CIP136:didNotVote",
+            "unconstitutional": "CIP136:unconstitutional"
+          },
+          "@id": "CIP136:internalVote"
+        },
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "references": {
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "RelevantArticles": "CIP136:RelevantArticles",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri"
+          },
+          "@id": "CIP100:references"
+        },
+        "summary": "CIP136:summary"
+      },
+      "@id": "CIP136:body"
+    },
+    "hashAlgorithm": "CIP100:hashAlgorithm"
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance",
+      "witness": {
+        "publicKey": "",
+        "signature": "",
+        "witnessAlgorithm": "Ed25519"
+      }
+    }
+  ],
+  "body": {
+    "conclusion": "For these reasons, Ace Alliance finds the proposed \"IO: Cardano High Assurance Technical Collaboration\" Treasury Withdrawals Governance Action constitutional under Article II.6.1 and Article II.7.1 through II.7.6.",
+    "counterargumentDiscussion": "A reasonable counterargument arises from Article II.7.1, which requires that the proposal specify \"the purpose of the withdrawal\" and \"the period for delivery of proposed activities which the withdrawal shall be used for.\" The proposal commits to integrating the High Assurance toolkit into cardano-init only \"if funded in Developer Experience proposal,\" and one Workstream 1 milestone references demonstration on TWAG 1 examples whose constitutional standing and funding status are not established in the record before us. On this reading, a Treasury Withdrawal whose scope is partly contingent on a separate, not-yet-approved governance action arguably leaves the withdrawal's purpose indeterminate at the moment of submission, because the community cannot determine what ₳13,078,578 will actually purchase if the dependencies fail. We acknowledge that this argument has force, and we are mindful that conditional-scope language in TWGAs warrants careful constitutional attention.\n\nWe reject that view on these facts. The proposal specifies, with particularity, the purpose, period, and costs of the activities the withdrawal controls: the two workstreams, their milestones, and their costs are all enumerated in the Deliverables and Roadmap section and the Budget table. The cardano-init integration is described expressly as a downstream enhancement contingent on a separate action, and the Risks table classifies non-delivery of that integration as Low severity with templates delivered via dedicated repositories as mitigation. Read fairly, the conditional language is a transparent contingency disclosure rather than a defect in scope. The Constitution sets a floor, not a project-management manual, and a Treasury Withdrawal does not become unconstitutional merely because some non-core deliverables depend on facts the proposer cannot guarantee. On the record before us, the funded scope is specified with sufficient particularity to satisfy Article II.7.1.\n\nA second counterargument arises from Article II.7.5, which requires designation of administrators \"responsible for monitoring how the funds are used, and ensuring the deliverables are achieved.\" Delivery here is distributed across seven independent organizations, with each contributing defined components and long-term maintenance responsibilities. The Risks table itself concedes that \"one or more collaborators fail to deliver their work package on time\" is a Medium-likelihood, High-severity risk on the critical path. The strongest version of the concern is that, where the deliverable architecture spreads execution risk across parties the Administrator does not contractually control, the accountability obligation of Article II.7.5 may be satisfied in form rather than in substance, because Intersect's enforcement remedy against a non-IO collaborator that fails to deliver is not made explicit in the proposal beyond the IO–CDH contract and milestone-based disbursement. This is a serious question and we have taken it seriously.\n\nWe reject that view on these facts as well. Article II.7.5 designates the Administrator's role, and the proposal names Intersect, acting on behalf of Cardano Development Holdings, as the responsible Administrator. The Constitution does not require that every delivery counterparty be named as a co-administrator, nor that every collaborator carry its own constitutional accountability burden. Intersect's TRSC framework, milestone-gated PSSC disbursement, and the five-member external Oversight Committee collectively address the constitutional requirement, and the proposer further discloses that the IO team can absorb partial scope if collaborators fail. The Constitution sets a floor, not a detailed governance manual; it leaves the Cardano Community and its DReps the responsibility to judge whether a particular consortium model is strong enough to merit funding. For purposes of the constitutional question before this Committee, the Administrator architecture satisfies Article II.7.5 on the record before us.",
+    "govActionId": "gov_action1w0shrfxqwv95kk0v4cn34wylz25a2cmqkq5jpc0e2yrahhqava3q2yd5rxu",
+    "internalVote": {
+      "abstain": 2,
+      "againstVote": 0,
+      "constitutional": 3,
+      "didNotVote": 0,
+      "unconstitutional": 0
+    },
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmS94MqQuyU45Y71pjxDqQd13tyft49yEWFFXBpcdbh2Bn\n\n\"IO: Cardano High Assurance Technical Collaboration\" (73e171a4c0730b4b59ecae271ab89f12a9d56360b02920e1f95107dbdc1d6762#5) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution. The TWGA seeks to withdraw ₳13,078,578 from the Cardano Treasury to fund two complementary workstreams under a Cardano High Assurance umbrella: an extension of Blaster from single-script to full DApp-level automated formal verification, with VS Code integration, a Common Vulnerability Library, an equivalence-checking tool, and language integrations for Aiken, Pebble, Scalus, and Futura; and a single-command Container-Based Developer Environment packaging the complete high-assurance toolchain. Funds are directed into Intersect's 2025 Treasury Reserve Smart Contract (stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr), administered by Intersect on behalf of Cardano Development Holdings, with delivery distributed across a technical collaboration comprising IO, Lantr, Harmonic Labs, SAIB, Midgard Labs, TxPipe, and No.Witness Labs.\n\nThe procedural standards of Article II.6 are satisfied: the proposal anchors to an IPFS-hosted document with the on-chain blake2b-256 hash, a content-addressed form \"immutable and incapable of being altered after submission,\" and the metadata provides the title, abstract, justification, and supporting materials required by II.6.2. The substantive Article II.7 requirements are met as well. Under Article II.7.1, \"Treasury Withdrawals actions must specify the terms of the withdrawal,\" and the proposal specifies the purpose (two named workstreams), period (Q3 2026 through Q2 2027 with milestone dates), itemized costs (line-by-line across ten Summit/CBDE categories), and refund circumstances (end-of-period sweep and proportional return on partial delivery). The disclosure requirement of Article II.7.2 is met by a tabular Prior Treasury Receipts section identifying ₳130,708,860 allocated and ₳78,459,777 withdrawn across Blockfrost, Catalyst, IOE, IOR, and Governance, each with its governance action hash. The 350M Net Change Limit covering Epoch 613 through Epoch 713 is set, and this ₳13,078,578 ask does not exceed it, satisfying Article II.7.3 and Appendix I guardrail TREASURY-02a.\n\nA 3rd Party Assurer funded as part of the withdrawal supports milestone acceptance, satisfying the periodic independent audit and oversight allocation under Article II.7.4. Article II.7.5 is satisfied by Intersect's designation as Administrator, operating through the TRSC and PSSC framework with a five-member external Oversight Committee (Sundae Labs, Cardano Foundation, Dquadrant, Xerberus, NMKR). The custody requirement of Article II.7.6 is satisfied by the proposal's commitment that \"all TRSC and PSSC instances cannot be staked with an SPO and will be delegated to the auto-abstain predefined DRep,\" with a community-audit dashboard, on the same Intersect TRSC pattern we have accepted as constitutional in prior actions in this family.",
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmfM3VRtGvpmxTDYrgGJoPSLW41SiNyeazfjusg98jrATS"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "8933e116ac2ca3561ca0a620c71061db939d5d984e151127079a483b438927cf"
+      }
+    ],
+    "summary": "Ace Alliance finds the proposed \"IO: Cardano High Assurance Technical Collaboration\" Treasury Withdrawals Governance Action constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/"
+  },
+  "hashAlgorithm": "blake2b-256"
+}

@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "authors": {
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@context": {
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature",
+            "witnessAlgorithm": "CIP100:witnessAlgorithm"
+          },
+          "@id": "CIP100:witness"
+        }
+      },
+      "@id": "CIP100:authors"
+    },
+    "body": {
+      "@context": {
+        "conclusion": "CIP136:conclusion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "govActionId": "CIP129:governance-action-identifiers",
+        "internalVote": {
+          "@container": "@set",
+          "@context": {
+            "abstain": "CIP136:abstain",
+            "againstVote": "CIP136:againstVote",
+            "constitutional": "CIP136:constitutional",
+            "didNotVote": "CIP136:didNotVote",
+            "unconstitutional": "CIP136:unconstitutional"
+          },
+          "@id": "CIP136:internalVote"
+        },
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "references": {
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "RelevantArticles": "CIP136:RelevantArticles",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri"
+          },
+          "@id": "CIP100:references"
+        },
+        "summary": "CIP136:summary"
+      },
+      "@id": "CIP136:body"
+    },
+    "hashAlgorithm": "CIP100:hashAlgorithm"
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance",
+      "witness": {
+        "publicKey": "",
+        "signature": "",
+        "witnessAlgorithm": "Ed25519"
+      }
+    }
+  ],
+  "body": {
+    "conclusion": "Ace Alliance finds the proposed \"IO: Consensus Initiative\" Treasury Withdrawal Governance Action Constitutional.",
+    "counterargumentDiscussion": "A reviewer might argue that the proposal's explicit exclusion of the community hard-fork vote and third-party ecosystem readiness from acceptance criteria means the treasury funds a body of work that may never result in a mainnet Leios activation. The Constitution requires that the terms of a withdrawal be clearly stated; it does not require that treasury-funded work guarantee its ultimate adoption outcome. The proposal correctly scopes what Input Output Global controls, and lists the external dependencies as risks with mitigation strategies. The terms are constitutionally sufficient.\n\nA reviewer might further argue that the 277,143 ADA security and audits allocation (1% of the total ask) is thin relative to the complexity of a consensus protocol upgrade. The Constitution requires allocation of funds for periodic independent audits; it does not prescribe a minimum percentage. The line item is present and milestone-based third-party assurance covers the delivery period. The requirement is satisfied.\n\nA reviewer might also note, as a policy observation rather than a constitutional finding, that Input Output Global remains the sole proposer for Cardano's most significant protocol upgrade. Whether the community would benefit from additional independent parties involved in Leios research or implementation is a policy question for the community, not a matter of constitutional compliance.\n\nA reviewer might further argue that this proposal represents a double-dipping concern: personnel already receiving compensation through ongoing maintenance contracts could simultaneously draw treasury funds for Leios development. That concern is a legitimate policy question, and it is a DRep responsibility to weigh when casting a treasury vote; it is not a constitutional compliance question the CC can resolve. The on-chain commit record provides relevant context, however. Of the 17 active contributors to the `input-output-hk/ouroboros-leios` repository since January 1 2026, only 4 also have commit activity in the cardano-node dependency repositories: Damian Nadales and Drazen Popovic (ouroboros-consensus team), Michael Karg (Tracing), and Marcin Wójtowicz (Network). The remaining 13 leios contributors have no commits across the cardano-node ecosystem (cardano-node, cardano-cli, cardano-api, ouroboros-consensus, ouroboros-network, cardano-ledger, cardano-base, cardano-node-tests, plutus, hermod-tracing, cardano-db-sync) during this period. The leios contributor pool is therefore largely distinct from the node maintenance team. The commit evidence suggests the bulk of this proposal funds the simulation, research, and protocol engineering work separate from the ongoing node release obligations, which DReps should find relevant when assessing the double-dipping concern. The implied per-engineer cost derived from the development budget and visible contributor count is above typical market rates for this type of work; evaluating whether that represents fair value is a DRep responsibility, not a constitutional question. It should also be noted that commit history reflects only contributors visible through public version control activity; the proposal may fund personnel in non-coding roles such as project management, research, or ecosystem coordination who do not appear in the repository record. DReps are better positioned than the CC to request a full staffing breakdown from the proposer if that transparency is desired.",
+    "govActionId": "gov_action1w0shrfxqwv95kk0v4cn34wylz25a2cmqkq5jpc0e2yrahhqava3qyxkn2yk",
+    "internalVote": {
+      "abstain": 2,
+      "againstVote": 0,
+      "constitutional": 3,
+      "didNotVote": 0,
+      "unconstitutional": 0
+    },
+    "precedentDiscussion": "The Intersect and Sundae Labs Treasury Reserve Smart Contract custody structure was reviewed and accepted in a prior rationale under Articles II.7.5 and II.7.6. The same architecture is used here; that finding carries forward.",
+    "rationaleStatement": "This Treasury Withdrawal Governance Action requests 27,714,342 ADA to fund the Ouroboros Leios consensus upgrade from public testnet to mainnet-ready release candidate, submitted by Input Output Global and administered through Intersect. Input Output Global's role as proposer is noted; the same constitutional standard applies as to any other proposer. On enactment, funds transfer to Intersect's 2025 Treasury Reserve Smart Contract (stake17xzc8pt7fgf0lc0x7eq6z7z6puhsxmzktna7dluahrj6g6ghh5qjr) for milestone-based disbursement. The proposal targets three objectives from Q4 2026 through Q1 2027: a mainnet-ready release candidate (Software Readiness Levels 5-8), systematic validation through load testing and adversarial red-teaming, and hard-fork enabling work. The proposal explicitly scopes acceptance to what Input Output Global controls; external dependencies such as the community hard-fork vote are listed as risks, not acceptance criteria.\n\nThe relevant provisions are Article II.6, Article II.7, and Appendix I TREASURY guardrails.\n\n**Article II.6.1 (Metadata Format).** Metadata is IPFS-anchored at QmNqVt8X1EX9iJJXGaEeiZ5nbePL91NkZcoVedpn6gfKWA; Koios confirms meta_is_valid true, meaning the on-chain hash matches the document. Conforms to CIP-0108.\n\n**Article II.6.2 (Metadata Structure).** Title, abstract, motivation, and rationale are present. The rationale includes key performance indicator alignment tables, a phased deliverables roadmap, budget line items, a risk register, and prior receipt disclosure. A PDF is linked via IPFS (QmPdBp8QjKaPdYdvwLxzDiCxX85hGx8H6rxbSvTTuLkcx2). Sufficient.\n\n**Article II.7.1 (Terms).** Purpose (Leios release candidate and hard-fork enabling), delivery period (Q4 2026 - Q1 2027), three enumerated objectives with milestone descriptions, and budget breakdown (development 86%, infrastructure 1%, security and audits 1%, legal 1%, ecosystem support 6%, operations 3%, governance 1%, other 1%) are all stated. Refund conditions specified: unspent or reduced-scope funds return to the Treasury.\n\n**Article II.7.2 (Prior Funding Disclosure).** Input Output Global discloses 78,459,777 ADA drawn across five workstreams from prior governance action 8ad3d454...#1/#2/#22/#23/#32, out of 130,708,860 ADA allocated, with on-chain references for each. Satisfied.\n\n**Article II.7.3 (Net Change Limit Compliance).** The 350,000,000 ADA Net Change Limit (epochs 613-713) applies. The 27,714,342 ADA ask is well within it.\n\n**Article II.7.4 (Audits and Oversight).** 277,143 ADA (1%) allocated to security and audits. Milestone-based third-party assurance is built into the delivery structure. Intersect's delivery assurance function constitutes the required implementation of oversight metrics, with progress published publicly. Both the periodic independent audit requirement and the oversight metrics requirement are satisfied.\n\n**Article II.7.5 (Administrator).** Intersect named as administrator. Multi-signature Treasury Reserve Smart Contract with a five-entity Oversight Committee (Sundae Labs, Cardano Foundation, Dquadrant, Xerberus, NMKR).\n\n**Article II.7.6 (Custody).** Funds held in Intersect's 2025 Treasury Reserve Smart Contract, delegated to the auto-abstain predefined delegated representative, not staked with any stake pool operator. Milestone controls enforced on-chain; unspent funds swept to Treasury.\n\n**Appendix I (Guardrails).** TREASURY-02a: ask is within the Net Change Limit. TREASURY-03a: denominated in ADA. TREASURY-01a: not engaged.",
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmNqVt8X1EX9iJJXGaEeiZ5nbePL91NkZcoVedpn6gfKWA"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "7e7429d87f72ee877611e5eef4a47bfcadf0f4ac8a31bef1836ba5f4262090c4"
+      }
+    ],
+    "summary": "Ace Alliance finds the proposed \"IO: Consensus Initiative\" Treasury Withdrawal Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/"
+  },
+  "hashAlgorithm": "blake2b-256"
+}
