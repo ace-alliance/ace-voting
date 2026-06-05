@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "authors": {
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@context": {
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature",
+            "witnessAlgorithm": "CIP100:witnessAlgorithm"
+          },
+          "@id": "CIP100:witness"
+        }
+      },
+      "@id": "CIP100:authors"
+    },
+    "body": {
+      "@context": {
+        "conclusion": "CIP136:conclusion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "govActionId": "CIP129:governance-action-identifiers",
+        "internalVote": {
+          "@container": "@set",
+          "@context": {
+            "abstain": "CIP136:abstain",
+            "againstVote": "CIP136:againstVote",
+            "constitutional": "CIP136:constitutional",
+            "didNotVote": "CIP136:didNotVote",
+            "unconstitutional": "CIP136:unconstitutional"
+          },
+          "@id": "CIP136:internalVote"
+        },
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "references": {
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "RelevantArticles": "CIP136:RelevantArticles",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri"
+          },
+          "@id": "CIP100:references"
+        },
+        "summary": "CIP136:summary"
+      },
+      "@id": "CIP136:body"
+    },
+    "hashAlgorithm": "CIP100:hashAlgorithm"
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "summary": "Ace Alliance finds the proposed \"[OriLife × TonFarm] Identifying 180 Million Durians Without Physical Labels\" Treasury Withdrawals Governance Action unconstitutional under Article II.7.5 and Article II.7.6. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmTu9UHDccFnTV8F25fxXPopLFTJyYAjVmWcJmXpAYno4n\n\n\"[OriLife × TonFarm] Identifying 180 Million Durians Without Physical Labels\" (2f583d8efb7a01da81df432f561a5a9bb2f5749555cea3e19d5097a9bfb06b52#0) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution. The TWGA seeks to withdraw 2,400,000 ada from the Cardano Treasury to fund a tamper-evident agricultural traceability deployment across 12,000 hectares of durian production in Đắk Lắk, Vietnam, ahead of Vietnam's December 1, 2026 mandatory traceability connection deadline under Circular 11/2026/TT-BCT. The proposer is the OriLife Alliance, a three-company consortium comprising DDC Holdings, GreenSun Tech, and Aladin Contract, with field operations and government relations led by DDC Holdings, research and core intellectual property held by GreenSun Tech, and product and user experience delivered by Aladin Contract.\n\nArticle II.7.5 requires that \"Treasury Withdrawals actions shall designate one or more administrators responsible for monitoring how the funds are used, and ensuring the deliverables are achieved.\" Article II.7.6 further requires that \"Any ada received from a Cardano Blockchain treasury withdrawal, so long as such ada is being held by an administrator prior to further disbursement to the Treasury Withdrawal Recipient, must be kept in one or more separate accounts that can be audited by the Cardano Community, and such accounts shall not be delegated to an SPO but must be delegated to the predefined abstain voting option.\" The proposal asserts that these requirements are satisfied through Intersect: the Abstract states that \"All ADA locked in Intersect-managed escrow,\" the Milestones section repeats that \"Funds locked in Intersect-managed escrow (Annex D), disbursed only upon 2-of-3 IOB signatures,\" and the proposal further asserts alignment with the \"Intersect 2026 Budget Framework.\"\n\nThe on-chain governance action does not implement what the proposal text asserts. The withdrawal destination encoded in the proposed treasury withdrawal is the stake address stake1u9vp5r7j6n65xw9lkfy8fxweaght2cqsn7e0t62nmhlz2dcm5yzrr, which is the same stake address listed in the proposal metadata as the proposer's deposit return address. It is not an Intersect-managed Treasury Reserve Smart Contract or any other account under Intersect's administrative control. The Administrator framework as previously accepted by this Committee in the Intersect-administered TWGAs routes treasury funds directly to a Sundae Labs-audited treasury-management smart contract operated by Intersect, bypassing the proposer entirely. The OriLife withdrawal does not implement that routing. The proposal provides no MoU, signed agreement, letter of consent, or any other evidence that Intersect has agreed to administer these funds. The proposal also references an Intersect Oversight Body operating under a two-of-three signature regime, but this body is not defined anywhere in the on-chain anchor document, and the structure does not correspond to the four-member Oversight Committee model, with three-of-three administrative authorization and three-of-five trustee authorization for sensitive operations, that Intersect actually operates under the established TRSC framework.\n\nThe on-chain configuration of the withdrawal destination further fails Article II.7.6 on two of its three substantive requirements. The destination stake address is presently delegated to pool1q9kwa675j2z53jecrs6pn3fqsc9ypxrsypu5dgu6hammqkagy22, the TIGER pool, which the proposal's own Conflict of Interest disclosure identifies as operated by Duc Tiger, the Alliance's Project Manager. The Constitution provides that an administrator's holding account \"shall not be delegated to an SPO.\" The destination is also delegated to drep1ygeqtuysjy9s3mw3ej7essghq9rk3cnl08fehntu4jw3rtqfw96dg, a registered DRep, rather than to the predefined abstain voting option that Article II.7.6 mandates. The account that would receive the 2,400,000 ada from the Cardano Treasury is therefore presently configured in two ways that the Constitution forbids for administrator-held funds. The proposal contains no on-chain provision compelling re-delegation prior to or contemporaneous with disbursement, and no off-chain commitment that addresses the SPO-delegation and abstain-DRep requirements directly.\n\nArticles II.7.5 and II.7.6 together establish a constitutional separation between the project receiving treasury funds and the account that holds those funds prior to milestone disbursement. The Administrator's role is to keep treasury ada one step removed from the project members who must demonstrate that the funded work is being delivered. The SPO-delegation prohibition and abstain-DRep delegation requirement together ensure that custody during the holding period cannot enrich a delivery party through stake-derived rewards or be used to influence Cardano governance. The proposed structure inverts this separation. The funds flow directly into the proposer's own stake address, which is delegated to the proposer's Project Manager's own stake pool. The constitutional requirement governs the account that receives the withdrawal from the Treasury, not a downstream transfer that the Constitution does not anticipate and that the on-chain governance action does not require. We do not reach the remaining sub-provisions of Article II.7 or the general standards of Article II.6, because the Article II.7.5 and Article II.7.6 defects identified above are dispositive on the record before us.",
+    "counterargumentDiscussion": "A reasonable counterargument is that the on-chain withdrawal destination is not constitutionally dispositive because, after receipt of the 2,400,000 ada, the OriLife Alliance could transfer the funds into an Intersect-managed escrow account, and the proposer could re-delegate the destination stake address to the predefined abstain voting option and away from TIGER pool. On this reading, the proposal's Intersect-managed escrow commitment is a procedural representation that will be operationalized off-chain after the funds arrive, and Articles II.7.5 and II.7.6 are satisfied in substance at the point of disbursement rather than at the point of withdrawal. The argument observes that constitutional review should consider the proposer's textual commitments and not merely the static on-chain state at the moment of submission. We acknowledge that this argument has force as a matter of practical sequencing.\n\nWe reject that view on these facts. The Administrator framework, by both its text and its purpose, governs the account that receives ada from the Cardano Treasury. The phrase \"ada being held by an administrator\" in Article II.7.6 contemplates that, at the moment of treasury disbursement, the administrator is already in possession and the on-chain account holding the ada is already configured to satisfy the constitutional constraints. A downstream transfer from the proposer to a putative Intersect escrow does not cure the defect: the proposer would be the initial recipient, and the post-receipt transfer would be a discretionary act of the proposer rather than a safeguard imposed by the withdrawal architecture. The constitutional purpose of separating administrator custody from project execution is precisely to remove that discretion. An Administrator routes funds from the Treasury into a smart contract that the project members do not control, so that the project must demonstrate milestone fulfillment to a body whose custody cannot be unilaterally undone. Where, as here, funds first land in the proposer's stake account, which is in turn delegated to a stake pool operated by the proposer's own Project Manager, the constitutional separation has been collapsed before any Administrator can act. The proposal further provides no evidence that the OriLife Alliance has established the relationship with Intersect on which its entire compliance theory depends. There is no signed MoU, no letter of consent, no link to an Intersect-controlled smart-contract address, and no on-chain mechanism binding the post-receipt transfer the counterargument relies upon. The Constitution sets a floor, and the floor includes that the Administrator be designated by the withdrawal itself, not by a post-receipt commitment the proposer is free to honor or to disregard. On the record before us, the proposed Administrator architecture does not satisfy Articles II.7.5 and II.7.6.",
+    "conclusion": "For these reasons, Ace Alliance finds the proposed \"[OriLife × TonFarm] Identifying 180 Million Durians Without Physical Labels\" Treasury Withdrawals Governance Action unconstitutional under Article II.7.5 and Article II.7.6.",
+    "internalVote": {
+      "abstain": 0,
+      "againstVote": 0,
+      "constitutional": 0,
+      "didNotVote": 0,
+      "unconstitutional": 5
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmSNGYbjMQfb8tMvPtqi5bdMeXsV5M27iFecFvddWmC8xL"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "41cb4bddb2f3babf90b23edc7a070b436b2b68e85c90024759a7b51e65070e76"
+      }
+    ],
+    "govActionId": "gov_action19avrmrhm0gqa4qwlgvh4vxj6nwe02ay42h828cva2zt6n0asddfqqtgph5d"
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance",
+      "witness": {
+        "publicKey": "",
+        "signature": "",
+        "witnessAlgorithm": "Ed25519"
+      }
+    }
+  ]
+}
