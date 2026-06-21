@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1guz68e8zkwphcdc8wnp40cclkv92qgnel7xnffmsmp2ljp09qtwqq596k4c",
+    "summary": "Ace Alliance finds the proposed \"The first node in the browser; a Cardano USP\" Treasury Withdrawal Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "\"The first node in the browser; a Cardano USP\" (gov_action1guz68e8zkwphcdc8wnp40cclkv92qgnel7xnffmsmp2ljp09qtwqq596k4c) is a Treasury Withdrawal Governance Action requesting 4,600,000 ada to fund twelve months of engineering on Gerolamo, a TypeScript Cardano light node packaged as a browser extension, at a stated 5 FTE. As a Treasury Withdrawal it is governed by both the general proposal standards of Article II, Section 6 and the additional standards of Article II, Section 7. The proposer is Harmonic Laboratories, an independent R&D firm. Our review is confined to whether the action satisfies the Constitution. The strategic, competitive, and \"USP\" claims in the proposal text are matters of policy for DReps and the community to weigh, not questions of constitutionality.\n\n**Article II.6.1 (Standardized Format and Immutable Anchor).** The action is submitted in a standardized, legible format and anchors an off-chain document at `ipfs://QmbQPrRhUUtvqNitu9mgC8esM3kXmR5iHGhEkLX1UZaLDy` with hash `444fb6a73db89d873a028eae85ce645f06965487901050bd46f6cacd8565eccc`. The IPFS content addressing makes the document immutable and allows any observer to confirm the on-chain action matches the final off-chain version.\n\n**Article II.6.2 (Sufficient Rationale).** The proposal contains a title, an abstract, a detailed motivation and rationale, a budget breakdown, a milestone schedule with acceptance criteria, and supporting references. This satisfies the minimum content requirement.\n\n**Article II.7.1 (Terms of the Withdrawal).** The proposal states the purpose (delivering a production-ready browser-based Cardano light node), a defined twelve-month delivery period (kickoff plus Q2 2026 through Q1 2027), and the relevant costs (5 FTE valued at 200,000 USD per FTE per year, plus a 15% refundable contingency, converted at 0.25 ADA/USD to a 4,600,000 ada total). Refund circumstances are specified through a contract-level \"Failsafe Sweep\" that returns unused funds to the Treasury after expiration and through the refundable nature of the 600,000 ada contingency reserve.\n\n**Article II.7.2 (Disclosure of Prior Treasury Funding).** The proposal's own constitutionality checklist addresses Section 7.2 by pointing to a 2025 retrospective of past funding and deliverables. The constitutional requirement is disclosure, and the proposal provides that disclosure through its supporting materials. On the record before us, that is sufficient.\n\n**Article II.7.3 (Net Change Limit).** A Net Change Limit must be set and must not be exceeded. The 350M ADA NCL for the period spanning epochs 613 to 713 is treated as set and active. The 4,600,000 ada requested here is well within that limit.\n\n**Article II.7.4 (Audit Allocation).** The proposal allocates funding, within the FTE cost structure, for a periodic independent financial audit performed by a third party with no operational involvement in HLabs, conducted on a quarterly basis with a final assessment, and scoped to ex-post verification of treasury disbursements and traceability of fund flows. This satisfies the requirement to allocate ada for periodic independent audits and oversight metrics.\n\n**Article II.7.5 (Administrators).** The proposal designates an Independent Oversight Board (Santiago Carmuega, Lucas Rosa, and Chris Gianelloni) responsible for reviewing milestones, co-signing disbursements, and halting funding if deliverables are not met. These named administrators are responsible for monitoring fund usage and ensuring deliverables are achieved.\n\n**Article II.7.6 (Custody and Delegation).** Funds are held in the audited SundaeLabs treasury-contracts escrow (`treasury.ak` / `vendor.ak`) in separate, on-chain-auditable accounts. The contract enforces auto-abstain DRep delegation and prohibits SPO delegation for all escrowed funds. This satisfies the separate-account and abstain-delegation requirements.\n\n**Appendix I.3 (Treasury Guardrails).** TREASURY-01a is met because the NCL was set by DReps via on-chain governance action exceeding the 50% threshold. TREASURY-02a is met because the 4,600,000 ada withdrawal does not exceed that limit. TREASURY-03a is met because the withdrawal is denominated in ada. No other guardrail group is engaged.",
+    "precedentDiscussion": "None",
+    "counterargumentDiscussion": "None",
+    "conclusion": "Ace Alliance finds the proposed \"The first node in the browser; a Cardano USP\" Treasury Withdrawal Governance Action Constitutional.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmbQPrRhUUtvqNitu9mgC8esM3kXmR5iHGhEkLX1UZaLDy"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "444fb6a73db89d873a028eae85ce645f06965487901050bd46f6cacd8565eccc"
+      },
+      {
+        "@type": "Other",
+        "label": "350 Million ADA NCL",
+        "uri": "gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
