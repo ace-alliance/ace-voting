@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1lwudrf9g66mzlrxhq62y5pvzhzzv9wgps7u04kne202udge7kknsqlgmhse",
+    "summary": "Ace Alliance finds the proposed \"Eternl: Path to Sustainability - v2\" Treasury Withdrawal Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "\"Eternl: Path to Sustainability - v2\" (gov_action1lwudrf9g66mzlrxhq62y5pvzhzzv9wgps7u04kne202udge7kknsqlgmhse) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution. The action withdraws 2,350,000 ada from the Cardano Treasury, valued by the proposer at approximately 420,000 USD at an assumed rate of 0.1787 USD per ada, to fund twelve months of Eternl wallet operations, maintenance, and development from August 2026 through July 2027, at a stated 6.0 FTE within a ten-person team. The proposer is Tastenkunst GmbH, operating the Eternl product. As in the prior version, the proposal frames the requested ada as a loan rather than a grant, committing to convert up to 420,000 USD worth of ada into stablecoins held in a publicly viewable company wallet, to return any ada above that amount to the Treasury, and to repay the Treasury in ada equal to the original USD value through a semi-annual review cadence tied to the rollout of paid Eternl Pro plans. This is the resubmission of \"Eternl: Path to Sustainability (2026-2027)\" (gov_action1ngpqafax5rvp8lcgey4asvqtycrh4e56fwp8cn2r9trx2ysryhtsqdm3w3z), which Ace Alliance found unconstitutional under Article II.7.4. We assess the constitutionality of the Action, not the merits of the funding request, and we apply identical scrutiny to a resubmission.\n\n**Article II.6 (Governance Action Standards).** The procedural standards are satisfied. The proposal anchors to an IPFS-hosted document, ipfs://QmQ6cDaLLeBMnf1zio7Xn8jV8uTUk68tPirx5uKH6HLr3L, with the on-chain blake2b-256 hash 8021a950826f251399495e5d370c4998723dd7dca2457b06c15ef218ba93df6a, a content-addressed form that is immutable once posted, and the metadata supplies the title, abstract, motivation, budget breakdown, roadmap, and supporting references that Article II.6.2 requires. The technical-review standard of Article II.6.3 applies only to Hard Fork Initiation and Parameter Update actions and is not engaged here.\n\n**Article II.7.1 (Terms of the Withdrawal).** The proposal specifies the purpose (twelve months of Eternl operations, maintenance, and cross-platform development), the delivery period (August 2026 through July 2027), the relevant costs and expenses (an itemized budget of 1,292,500 ada for Frontend at 55%, 587,500 ada for Backend at 25%, 117,500 ada for Support at 5%, 305,500 ada for Admin at 13%, and 47,000 ada for Audits at 2%), and the circumstances of refund (any ada exceeding the 420,000 USD target returned to the Treasury upon conversion, plus the semi-annual ada-denominated repayment of the full USD value and an additional donation of up to 210,000 USD worth of ada). The requirement is met.\n\n**Article II.7.2 (Prior Treasury Receipt Disclosure).** The proposal discloses prior receipts of treasury ada within the last 24 months. A History of Catalyst Grants and Treasury Grants section identifies the 2025 budget process withdrawal of 583,000 ada for Eternl maintenance administered by Intersect, the funding period of which ends in July 2026, together with an Intersect CIP-95 implementation grant of 70,000 ada and prior Catalyst awards. The proposal further states that the team has received approximately 153,000 USD less than the proposed amount of the 2025 withdrawal owing to the decline in the ada price. The disclosure requirement is satisfied.\n\n**Article II.7.3 (Net Change Limit).** A Net Change Limit of 350,000,000 ada is in force for the period spanning epochs 613 through 713. The 2,350,000 ada requested here is well within that limit. Article II.7.3 is satisfied.\n\n**Article II.7.4 (Audit and Oversight Allocation).** This is the provision on which the prior version failed, and it is the provision the resubmission is directed at curing. Article II.7.4 requires an allocation of ada to cover the cost of periodic independent audits and the implementation of oversight metrics as to the use of the withdrawn ada. In the prior version, a single generic line item labeled \"Audits\" was unaccompanied by any description, and we held that the proposal gave the Community no basis to conclude that either periodic independent audits or oversight metrics were in fact funded. This version addresses and remediates this defect. A dedicated Independent Audits and Oversight Metrics section states that the 47,000 ada Audits allocation covers periodic independent audits of treasury fund use and the implementation of oversight metrics; that an independent party unaffiliated with Tastenkunst GmbH or the Eternl team will perform the audits in February 2027 and August 2027; that the audits will review receipt, custody, conversion, spending, remaining balances, Pro plan income relevant to repayment, and any refunds or repayments to the Cardano Treasury; and that the oversight metrics will include balances, conversion rates, transaction hashes, and treasury repayment hashes. The allocation is now directed at both objects the provision names, the audits are stated to be periodic (semi-annual) and independent (performed by an unaffiliated party), and the oversight metrics are enumerated. In our opinion this satisfies Article II.7.4.\n\n**Article II.7.5 (Administrator).** The proposal designates Tastenkunst GmbH as the treasury fund administrator. Tastenkunst is also the proposer, the recipient of the funds, and the entity that converts them to stablecoins and controls the company wallet, so the proposal again designates the recipient as its own and only administrator. As we observed in the prior version, the Constitution does not by its text define the administrator as a party distinct from the recipient, and self-administration, while it sits uneasily with the evident purpose of the rule, is not expressly prohibited. We note this structure as a continuing concern for the proposer and the Community to weigh, but it does not form the basis of our finding, and the newly specified independence of the auditing party partly addresses the oversight gap that the self-administration structure would otherwise leave.\n\n**Article II.7.6 (Auditable Accounts and Delegation).** The on-chain withdrawal destination is the reward address stake1u92flcyspwcp92lmgs0p47vdjrrek96l07cv3v6033wddfc8h620a. We confirmed on chain that this account is registered, is not delegated to any stake pool, and is delegated to the predefined auto-abstain voting option, and the proposal commits that ada held before conversion or return will be kept in an auditable account that is not delegated to an SPO and is delegated to the abstain option. Paying treasury funds to a regular, non-script stake address is not prohibited by the Constitution. The requirements of Article II.7.6 are met.\n\n**Appendix I (Guardrails).** The Treasury Withdrawals guardrails are satisfied: a Net Change Limit has been agreed by the DReps via on-chain action (TREASURY-01a), this withdrawal does not exceed it (TREASURY-02a), and the withdrawal is denominated in ada (TREASURY-03a).",
+    "precedentDiscussion": "The controlling precedent is our ruling on the immediately prior version of this proposal, \"Eternl: Path to Sustainability (2026-2027)\" (archived at 202605/eternl_path_to_sustainability_2026_2027/rationale.md), which we found unconstitutional under Article II.7.4. That ruling read Article II.7.4 as a two-part substantive requirement, an allocation directed at the cost of periodic independent audits and an allocation directed at the implementation of oversight metrics as to the use of the withdrawn ada, and held that an undifferentiated \"Audits\" line item, unaccompanied by any description, did not establish that either object was funded. In the Counterargument Discussion of that ruling we stated expressly that \"had the proposal stated that the Audits allocation covers periodic independent audits and the implementation of oversight metrics as to the use of the withdrawn ada, we would find Article II.7.4 satisfied.\" The present version makes exactly that statement and adds the identity-class of the auditor, the audit dates, the scope of the audits, and the enumerated oversight metrics. Applying the same framework to the cured text yields the opposite result on Article II.7.4. The administrator observation we recorded under Article II.7.5 in the prior ruling was a noted concern rather than a basis for the finding, and it remains so here.",
+    "counterargumentDiscussion": "The strongest counterargument is that the cure is merely textual: the proposal states that an unaffiliated party will perform the audits but does not name the specific auditor, and the entity that selects and engages that auditor is the same self-administering recipient whose structure we flagged in the prior version, so the Community is asked to take the independence commitment on trust. On this reading, the resubmission changes the words without changing the structure, and Article II.7.4 should not be treated as satisfied by a promise that the recipient controls.\n\nWe are not persuaded. Article II.7.4 requires an allocation of ada to cover the cost of periodic independent audits and the implementation of oversight metrics, and the constitutional question is whether the proposal makes it possible to conclude that ada has been allocated to both objects. This version does: it carries a 47,000 ada allocation, it states that the allocation covers both periodic independent audits and the implementation of oversight metrics, it fixes the audit cadence (February and August 2027), it requires the auditing party to be unaffiliated with Tastenkunst GmbH and the Eternl team, and it enumerates the oversight metrics to be produced. Article II.7.4 does not require that the specific audit firm be named in the metadata in advance, nor does it convert the separate administrator standard of Article II.7.5 into a constitutional bar. Whether the Community is satisfied with a self-administered recipient that engages its own independent auditor is a question of confidence for DReps to weigh on the merits, not a defect under Article II.7.4. The text now meets the requirement that its predecessor did not.",
+    "conclusion": "Ace Alliance finds the proposed \"Eternl: Path to Sustainability - v2\" Treasury Withdrawal Governance Action Constitutional.",
+    "internalVote": {
+      "constitutional": 4,
+      "unconstitutional": 1,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmQ6cDaLLeBMnf1zio7Xn8jV8uTUk68tPirx5uKH6HLr3L"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "8021a950826f251399495e5d370c4998723dd7dca2457b06c15ef218ba93df6a"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
