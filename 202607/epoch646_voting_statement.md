@@ -1,8 +1,6 @@
 # How Ace Alliance will vote on the Treasury Withdrawals expiring in epoch 646
 
-A [PDF version][pdf-link] of this statement is also made available (canonical: `ipfs://QmNhSqoiZSzXwV6Tgfe31NsSGC1xifd1so9TN5TtP3GcrK`).
-
-[pdf-link]: https://dweb.link/ipfs/QmNhSqoiZSzXwV6Tgfe31NsSGC1xifd1so9TN5TtP3GcrK
+A PDF version of this statement is also made available at ipfs://QmNhSqoiZSzXwV6Tgfe31NsSGC1xifd1so9TN5TtP3GcrK
 
 The Net Change Limit currently in force is 350,000,000 ada, set by the DReps through an on-chain governance action (gov_action1m3xx08yv788vfxqh6nfvrjtvmqpwezsy0ggaczctkyjmttc2wmxsq4jsr7q) for the period spanning epochs 613 through 713. The limit operates cumulatively: every treasury withdrawal enacted during the period consumes headroom against the 350,000,000 ada ceiling. After accounting for the 335,610,296 ada in withdrawals already enacted this period, 14,389,704 ada of headroom remains.
 
