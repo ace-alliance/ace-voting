@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1cpnqmlgpkz3dnwnm4spqzsmsp93y9mr4vqcm2ltcpqyyf7a7nszsq4h586r",
+    "summary": "Ace Alliance finds the proposed \"Global Order Book connect Cardano DeFi to increase transaction\" Treasury Withdrawals Governance Action unconstitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmPPBxMMxTnKRYRH8bYtrEbpm1G4sfuCnmAAjfMu3L43UE\n\n\"Global Order Book connect Cardano DeFi to increase transaction\" (gov_action1cpnqmlgpkz3dnwnm4spqzsmsp93y9mr4vqcm2ltcpqyyf7a7nszsq4h586r) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution. The Action seeks to withdraw 3,333,000 ada from the Cardano Treasury, 3,300,000 ada for delivery and a 33,000 ada budget administration fee, to fund Dano Finance's development of the DeFi Kernel as an open standard for shared liquidity, including a Spot Leverage Order Book, an American Options market, and a public compatibility registry. Minswap Labs is designated as budget administrator.\n\nSeveral of the Action's elements meet their respective standards. Article II.6's procedural standards are satisfied: the metadata anchors to a document whose on-chain blake2b-256 hash (d2d4bf0c17716b9ce7cb8cae1d85af45c236fd64a142a367e030115521a558cf) matches the anchored body, and the document supplies the title, abstract, motivation, rationale, milestone plan, and supporting references that Article II.6.2 requires. Article II.7.1's terms are stated: purpose, a milestone-based delivery plan running through security review and mainnet release, itemized costs, and repayment conditions under which unused, unearned, or undisbursed funds remain unspent or return to the Cardano Treasury under the administrator's process, supplemented by a commitment to share revenue from the Treasury-funded market-making pool contracts for twelve months after mainnet launch. A Net Change Limit of 500,000,000 ada is in force for the period spanning epochs 613 through 713, agreed by the DReps through the Net Change Limit Info Action (gov_action15atytcy8ru7mkcs8m7r8mx7k5x36t0h6grtgmak6v5wmf4nq07lsqhakceq) at the greater-than-50-percent active voting stake threshold TREASURY-01a requires, superseding the prior 350,000,000 ada limit for the same period. The 3,333,000 ada requested here is well within it, on its own and in aggregate with the other withdrawals pending at the time of this review, satisfying guardrail TREASURY-02a; the withdrawal is denominated in ada, satisfying TREASURY-03a. Article II.7.4 is satisfied through the budget administration fee, the funded security review whose report is a milestone deliverable, and the registry's public documentation obligations. Article II.7.5 is satisfied on its face: Minswap Labs, an established ecosystem entity distinct from the recipient, is designated to support fund administration, milestone review, and accountability. On Article II.7.2 we note a deficiency: the metadata contains no prior treasury funding statement of any kind for Dano Finance. If the proposer has received no treasury funds in the last 24 months, silence may technically satisfy the Article's terms, but the omission of even a negative disclosure deprives reviewers of an affirmative record that recent Treasury Withdrawals have provided.\n\n**Article II.7.6 (Custody and Delegation of Held Funds).** This is where the Action fails. The Article requires that any ada received from a treasury withdrawal, while held prior to further disbursement, be kept in separately auditable accounts that shall not be delegated to an SPO and must be delegated to the predefined abstain voting option. We verified the on-chain withdrawal destination, stake1u9h9w7ssk3zne7mchccz8kugsncn2muhx2p2v26s9gysyqquxfv3z, at the time of this review: it is a key-hash stake credential (CIP-19 mainnet header byte 0xe1) that is delegated to the stake pool pool1fs2m5rmlx66crcwwrrsf2pcxjhvk7kzdurcqusd3v5gm65cufnj and delegated to drep1y2eu92qwy875nlslg3ahlh0hy5vhzpkrjay88ptvdp0z6cqm9h25x, a DRep other than the predefined abstain option. Both delegation prongs of Article II.7.6 are violated on the face of the on-chain record. Treasury funds arriving at this destination would immediately participate in consensus rewards and in governance through a discretionary DRep, which is precisely what the Article forbids, and the designation of a capable administrator elsewhere in the proposal cannot cure the non-compliant account the withdrawal itself pays into.",
+    "counterargumentDiscussion": "One might argue that the delegations on the destination account are incidental and could be corrected before enactment, or that the administrator would promptly move the funds to a compliant arrangement after receipt. We assess the Action on the on-chain record as it stands at the time of review. Article II.7.6's requirements attach to the accounts that hold the withdrawal from the moment it is received; the designated destination is delegated to a stake pool and to a non-abstain DRep today, and a promise of future redelegation is not a compliant destination. This Committee has previously found unconstitutional a Treasury Withdrawal whose destination carried SPO and non-abstain DRep delegations, and the same conclusion follows here. Nothing prevents the proposer from resubmitting with a destination that satisfies the Article, and the remainder of the proposal's structure would carry forward to such a resubmission.\n\nOne might argue that because this governance action expires at the same epoch boundary at which the updated Net Change Limit is agreed, it should be considered against the previous 350,000,000 ada limit rather than the new one. We do not accept this argument. Ratification at that boundary does not move any ada; the withdrawal of funds actually takes place at the next epoch boundary, when the enacted action debits the Treasury, and at that point the 500,000,000 ada Net Change Limit is firmly set. The Constitution's accounting attaches to the removal of lovelace from the Treasury, and the newly agreed limit governs the period in which that removal occurs. If our reasoning is incorrect or unacceptable to the DReps, the governance system provides its own check: they have a five-day window in which to pass a No Confidence Governance Action, which would stop all pending treasury withdrawals and vacate the Constitutional Committee.",
+    "conclusion": "Ace Alliance finds the proposed \"Global Order Book connect Cardano DeFi to increase transaction\" Treasury Withdrawals Governance Action unconstitutional. The Action violates Article II.7.6 because the designated withdrawal destination is a key-hash stake address that is delegated to a stake pool and to a DRep other than the predefined abstain voting option, both verified on-chain at the time of this review. A resubmission directing the withdrawal to a compliant destination would cure the defect.",
+    "internalVote": {
+      "constitutional": 0,
+      "unconstitutional": 5,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "https://most-brass-sun.quicknode-ipfs.com/ipfs/QmcYmPjBjNMz4fuSJcyFmBRuCHuoGcQjvwRELsEm4DW1YD"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "d2d4bf0c17716b9ce7cb8cae1d85af45c236fd64a142a367e030115521a558cf"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action15atytcy8ru7mkcs8m7r8mx7k5x36t0h6grtgmak6v5wmf4nq07lsqhakceq",
+    "summary": "Ace Alliance finds the proposed \"Net Change Limit: Cardano Treasury (Epochs 613-713)\" Info Governance Action constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmSikrB92bX1Ao4HqSrkNs2R32uu34LkraNHo3eHueWRcC\n\n\"Net Change Limit: Cardano Treasury (Epochs 613-713)\" (gov_action15atytcy8ru7mkcs8m7r8mx7k5x36t0h6grtgmak6v5wmf4nq07lsqhakceq) is an Info Governance Action by which the DReps agree a new Net Change Limit of 500,000,000 ada for the Cardano Treasury for the period beginning at the start of epoch 613 and ending at the close of epoch 713. The new limit supersedes the 350,000,000 ada limit previously agreed for the same period, all Treasury Withdrawals already debited during the period count toward it, and the action records the DReps' agreement when Yes votes exceed 50 percent of the active voting stake, the threshold guardrail TREASURY-01a sets for agreeing a Net Change Limit. The action has no direct on-chain effect and authorizes no Treasury Withdrawal, and whether 500,000,000 ada is the right ceiling for the remainder of the period is a policy question committed to the Cardano Community and its DReps to decide, not to the Constitutional Committee. Our review is confined to the constitutionality of the action and of the outcome it contemplates.\n\n**Article II.7.3 and Guardrails TREASURY-01a and TREASURY-02a.** The action performs a constitutionally mandated function. Article II.7.3 provides that a Net Change Limit must be set and that Treasury Withdrawals must not exceed it, and Defined Term 7 of the Constitution defines the Net Change Limit as the maximum allowed amount of lovelace that may be removed from the Cardano Treasury in a given period. This action establishes exactly that parameter, 500,000,000 ada, for exactly such a period, epochs 613 through 713, with a precise lovelace-denominated accounting rule under which a withdrawal complies only if the cumulative debited sum does not exceed the limit. Nothing in the Constitution limits the DReps to a single Net Change Limit for a period or prevents a newly agreed limit from applying to it; the agreement mechanism, an Info Action carried by more than 50 percent of active DRep voting stake, is the same mechanism through which the 350,000,000 ada limit it supersedes was agreed, and TREASURY-01a prescribes that mechanism.\n\n**Article II.6.1 and II.6.2 (Governance Action Standards).** The procedural standards are satisfied. The action anchors to an IPFS-hosted document with the on-chain blake2b-256 hash d420037401626f4db20a255ca52d9d39764f68edfdc02686007cf9c731564f88, a content-addressed form that is immutable once posted, and the metadata supplies the title, abstract, motivation, rationale, and the precise definition, period, calculation, and accounting provisions that make the contemplated limit verifiable against the ledger.\n\n**Article III.1.4 (Scope of CC Review).** The action appropriately uses the Info Action mechanism, and our review under this Article extends to the constitutionality of the contemplated outcome. The outcome contemplated here, a defined Net Change Limit for a defined period agreed at the TREASURY-01a threshold, is not merely permitted by the Constitution but required by it as the precondition for any further Treasury Withdrawals. We have previously found Info Actions establishing a Net Change Limit for this same period constitutional on this reasoning, and we apply the same framework here.",
+    "conclusion": "Ace Alliance finds the proposed \"Net Change Limit: Cardano Treasury (Epochs 613-713)\" Info Governance Action constitutional. The action performs the Net Change Limit function that Article II.7.3 and guardrail TREASURY-01a require, its metadata satisfies Article II.6, and the level of the limit is a policy judgment reserved to the DReps.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmXFz2SrMXustcHZzmg6kz3vXRThebgyZ4pChF9grxqqMD"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "d420037401626f4db20a255ca52d9d39764f68edfdc02686007cf9c731564f88"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
