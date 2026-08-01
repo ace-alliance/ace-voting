@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1mr0qdz2jmagvsch6r08fhqvq6vu8jakt4c8m9s7ea7z0p740vntqq4yjd6j",
+    "summary": "Ace Alliance finds the proposed \"Se7en Labs: Daedalus Wallet Maintenance and Improvements 2026-2027\" Treasury Withdrawals Governance Action constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "\"Se7en Labs: Daedalus Wallet Maintenance and Improvements 2026-2027\" (gov_action1mr0qdz2jmagvsch6r08fhqvq6vu8jakt4c8m9s7ea7z0p740vntqq4yjd6j) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II, Section 6 and the additional Treasury Withdrawal standards in Article II, Section 7 of the Cardano Constitution. The TWGA seeks to withdraw 1,785,333 ada from the Cardano Treasury to fund a twelve-month time and materials engagement covering maintenance and development of Daedalus, Cardano's only full-node desktop wallet, delivered by Se7en Labs, Inc. Funds are directed into Intersect's 2026 Treasury Reserve Smart Contract and administered by Intersect on behalf of the recipient, with monthly disbursement against verified work.\n\nWe note at the outset that this proposal is IOG-adjacent. Daedalus originated as IOG's flagship full-node wallet, Se7en Labs assumed responsibility for its maintenance under an IOG contract in January 2026, and IOG continues to provide binary signing for official releases through the funding transition. We flag this connection once and apply the same constitutional scrutiny we would apply to any proposer, deferring to no party's preferred position. Our review is confined to constitutionality; the merits of funding Daedalus, the size of the ask, and the value of the deliverables are policy questions reserved to DReps and the wider Community.\n\nThe procedural standards of Article II.6 are satisfied. **Article II.6.1 (Immutable Anchored Document).** The proposal anchors to an IPFS-hosted metadata document with the on-chain blake2b-256 hash d53fb4d05888001d60d03f5bca438f9cff434c441a9743d5ba898c3a17464c45, a content-addressed form that is immutable and incapable of being altered after submission. **Article II.6.2 (Sufficient Rationale).** The metadata supplies the title, abstract, motivation, itemized budget, milestone roadmap with acceptance criteria, risk register, and supporting references that Article II.6.2 requires.\n\nThe substantive Article II.7 requirements are met. **Article II.7.1 (Terms of the Withdrawal).** The proposal specifies the purpose (protocol maintenance, hard fork readiness, hardware wallet support, a CIP-30 dApp connector, localisation, user support, and an architecture assessment for Daedalus), the delivery period (a twelve-month contract structured across seven milestones each with duration and acceptance criteria), the itemized costs (1,666,667 ada labor, 33,333 ada test hardware, 33,333 ada financial audit, and a 52,000 ada Intersect administration fee, totaling 1,785,333 ada), and the refund circumstances (any unspent labor, hardware, or audit budget is returned to the Treasury at contract close, and as a time and materials engagement funds are disbursed monthly against verified work rather than in advance).\n\n**Article II.7.2 (Prior Treasury Disclosure).** The proposal discloses that Se7en Labs has not received ada from the Cardano Treasury within the last 24 months, and further discloses that the team has operated under a direct IOG contract for Daedalus maintenance since January 2026, closing August 31, 2026. This satisfies the disclosure obligation of Article II.7.2.\n\n**Article II.7.3 (Net Change Limit).** A Net Change Limit of 350,000,000 ada is in force for the period spanning epochs 613 through 713, and it operates cumulatively: after the withdrawals already enacted this period, 14,389,704 ada of headroom remains, which is less than the Treasury Withdrawals expiring at the end of epoch 646 collectively request. For this governance action, Ace Alliance examined the amount of DRep delegated stake it has attracted, in accordance with the method announced in advance in our published voting statement (ipfs://QmdLDoTQ1hnZFTeTfAnq5V4BNchCFPNqfXSZVX5cVQzRFM): six hours before the end of epoch 645 we assess DRep support and vote constitutional on the actions that have received the requisite level of delegated stake for enactment, in order of submission, until the remaining headroom is exhausted. However, having assessed the three governance actions in line with that statement, we have determined that it is exceedingly unlikely that all three will be enacted and result in exceeding the Net Change Limit. We therefore find this governance action constitutional under Article II.7.3, satisfying guardrails TREASURY-01a and TREASURY-02a, and leave it to the DReps to make the final decision on which governance actions should pass. The withdrawal is denominated in ada, satisfying TREASURY-03a.\n\n**Article II.7.4 (Audit and Oversight Allocation).** The proposal dedicates a 33,333 ada budget line described as an \"Independent financial audit of funds received and expended under this proposal,\" and provides for oversight metrics through Intersect's independent milestone verification, milestone-based disbursement controls, and a public on-chain dashboard at treasury.sundae.fi through which the Community can audit both the reserve and project-specific contracts. Both objects that Article II.7.4 names, the cost of periodic independent audits and the implementation of oversight metrics as to the use of the withdrawn ada, are therefore funded and described, satisfying the provision.\n\n**Article II.7.5 (Administrator).** The proposal designates Intersect as administrator and independent milestone verifier, expressly invoking Article II.7.5, responsible for monitoring how the funds are used, independently confirming that acceptance criteria are met, and authorizing disbursements. A six-member external Oversight Committee (Sundae Labs, Cardano Foundation, Dquadrant, NMKR, Sundial, and Eternl) provides additional checks on Intersect's administrative actions. The administrator is a party distinct from the recipient, satisfying Article II.7.5.\n\n**Article II.7.6 (Auditable Accounts and Delegation).** Funds are held by Intersect in the 2026 Treasury Reserve Smart Contract and Project-Specific Smart Contract prior to disbursement. The proposal commits that all TRSC and PSSC instances cannot be staked with an SPO and are delegated to the auto-abstain predefined DRep, and that the contracts are auditable by the Community through the on-chain dashboard. This satisfies each element of Article II.7.6.\n\n**Appendix I (Guardrails).** The only guardrail group engaged is Appendix I.3 on Treasury Withdrawals (TREASURY-01a, 02a, 03a), addressed above. The Parameter Update, Hard Fork Initiation, Update Committee, New Constitution, No Confidence, and Info guardrail groups are not engaged by a Treasury Withdrawals action.",
+    "precedentDiscussion": "The Eternl proposal, 202605/eternl_path_to_sustainability_2026_2027/rationale.md, is instructive by contrast on Article II.7.4. There we found a wallet-maintenance Treasury Withdrawal unconstitutional because a single undifferentiated \"Audits\" line item, unaccompanied by any description, gave the Community no basis to conclude that both periodic independent audits and the implementation of oversight metrics were funded. This proposal does not share that defect: its audit line item is expressly described as an independent financial audit of funds received and expended, and oversight metrics are separately provided through Intersect's independent milestone verification and the public on-chain dashboard. The two objects of Article II.7.4 are each identified and funded, which is what Eternl found lacking.",
+    "counterargumentDiscussion": "A reviewer might further argue, given our Eternl finding, that the 33,333 ada audit allocation is too thin or too generic to satisfy Article II.7.4. We are not persuaded. Unlike the Eternl line item, this allocation is expressly described as an independent financial audit of funds received and expended under the proposal, and the oversight-metrics object of Article II.7.4 is satisfied independently by Intersect's role as independent milestone verifier and by the public on-chain dashboard. Article II.7.4 does not prescribe a minimum sum or a particular audit cadence; it requires that ada be allocated to the audit and oversight functions and that the proposal make it possible to conclude those functions are funded. This proposal does.",
+    "conclusion": "Ace Alliance finds the proposed \"Se7en Labs: Daedalus Wallet Maintenance and Improvements 2026-2027\" Treasury Withdrawals Governance Action constitutional.",
+    "internalVote": {
+      "constitutional": 4,
+      "unconstitutional": 0,
+      "abstain": 1,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://QmdWtCCvK6CJUzP4SFiuL5W8hg3eNr5LyngJHnwjoNxJey"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "d53fb4d05888001d60d03f5bca438f9cff434c441a9743d5ba898c3a17464c45"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
