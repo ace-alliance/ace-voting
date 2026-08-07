@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action122wue2k65qq8gmpz795z2axt8apka6ay6xt3pwg8jxj5yfkujmtsqvlfpu7",
+    "summary": "Ace Alliance finds the proposed \"Withdraw 120,000,000 ada for AlphaGrowth’s Cardano PRIME\" Treasury Withdrawal Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmeLSMR9tUyD8rNmUZUZ1Lk6LvnUVitMgC7ogGGfHoUYBL\n\n\"Withdraw 120,000,000 ada for AlphaGrowth’s Cardano PRIME\" (gov_action122wue2k65qq8gmpz795z2axt8apka6ay6xt3pwg8jxj5yfkujmtsqvlfpu7) is a Treasury Withdrawal Governance Action requesting 120,000,000 ada for a twelve month program to improve DeFi protocol readiness, activate incentives, and grow liquidity across Cardano markets. The program is executed by AlphaGrowth under Operating Group oversight, with Intersect designated as administrator managing the withdrawn funds directly through the treasury management smart contract framework developed by Sundae Labs. Funds are released through milestone gated and action gated processes, including a Month 4 Phase 3 release gate, and the proposal defines six return to treasury triggers for unused, unearned, unreleased, or excess funds.\n\nUnder Article II.6.1, governance actions \"shall follow a standardized and legible format before being recorded or enacted on-chain\" with an anchor document that is \"immutable and incapable of being altered after submission\". The proposal anchor is a content addressed IPFS document whose hash matches the on-chain record, and it contains the title, abstract, justification, and supporting materials that Article II.6.2 requires.\n\nUnder Article II.7.1, Treasury Withdrawals \"must specify the terms of the withdrawal\", including purpose, delivery period, relevant costs and expenses, and refund circumstances. The proposal specifies its purpose across a three phase operating model, a twelve month delivery period, itemized costs, and six defined return triggers. The disclosure requirement of Article II.7.2 is met by the express statement that AlphaGrowth has not received Cardano Treasury funding within the prior 24 months. The Net Change Limit required by Article II.7.3 has been set, this withdrawal does not cause the current limit to be exceeded, and the proposal further conditions itself on sufficient remaining capacity at enactment; the request is denominated in ada as the Treasury guardrails require, with USD figures included only as planning references.\n\nUnder Article II.7.5, Treasury Withdrawals \"shall designate one or more administrators responsible for monitoring how the funds are used, and ensuring the deliverables are achieved.\" Intersect is designated unconditionally, and Intersect has publicly agreed to the designation: the metadata anchor names Intersect as an author and carries a valid cryptographic witness signature over the document body, made with the same key Intersect uses as author witness on the treasury withdrawal actions it has itself submitted. The allocation required by Article II.7.4 is present as a dedicated 2,000,000 ada independent audit or assurance line, alongside quarterly financial and ecosystem impact reporting. Under Article II.7.6, withdrawn ada held by an administrator must be kept in \"separate accounts that can be audited by the Cardano Community\" and \"shall not be delegated to an SPO but must be delegated to the predefined abstain voting option.\" The on-chain withdrawal destination is the 2026 Treasury Reserve Smart Contract stake address, a script locked account controlled by Intersect that is not delegated to any stake pool and is delegated to the predefined always abstain voting option at the time of submission, and the proposal commits Intersect to managing the withdrawn funds into a separate auditable account. On the record before us, that is sufficient.",
+    "counterargumentDiscussion": "A valid counterargument is that the performance fee, tied to verified qualifying TVL growth, gives the proposer a financial interest in the very metrics the program reports, and that a treasury program should not compensate its operator by formula against outcomes the operator helps measure. We acknowledge that this argument has force. We reject the view that it renders the Action unconstitutional. Article II.7.1 requires that the terms of the withdrawal be specified, and they are: the fee is defined against an attribution methodology that excludes ada price effects and TVL not attributable to the program, disbursements pass through published recommendation and review processes subject to Operating Group veto, and the funds are custodied by Intersect rather than the proposer. Whether a performance based compensation structure is a desirable use of treasury funds is a question of program design, committed to the Cardano Community and its DReps to decide, not to the Constitutional Committee.\n\nA second counterargument is that the scale of this withdrawal, the largest single request under the current Net Change Limit, combined with a Phase 3 deployment that is defined only after earlier phases complete, asks the Community to approve capital before its final use is fully known. This is a serious question and we have taken it seriously. We reject that view on these facts. The Constitution sets a floor, not a detailed governance manual. Article II.7 requires specified terms, a refund mechanism, an audit allocation, a responsible administrator, and compliant custody, and each is present: Phase 3 funds deploy only after the Operating Group affirms the release plan, unused and unreleased funds return to the Treasury under defined triggers, and the administrator holds the funds throughout. The wisdom of committing 120,000,000 ada to a growth program of this design is exactly the judgment the DReps are constituted to make.",
+    "conclusion": "Ace Alliance finds the proposed \"Withdraw 120,000,000 ada for AlphaGrowth’s Cardano PRIME\" Treasury Withdrawal Governance Action Constitutional under Article II.6 and Article II.7.1 through II.7.6.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreieaerpnfvjblld4pywite3rbfxkebf2fvlacerklrdmsfvp4kvui4"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "1ac5c12a6b09d68d6602d79df4ea82e92f1c15dc306a31c320fd546b4b7ad690"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}

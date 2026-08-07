@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action14dr5yg75pchr2sz42djtuflpvx5qnsek29qg7s7cft8lzrqt5vrqqtqntpk",
+    "summary": "Ace Alliance finds the proposed \"Reduce minPoolCost to 75 ada and increase Plutus Memory Limits (Part 2)\" Protocol Parameter Change Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://QmTqUPF2RMZDxuPMaVgF8wXx2hVqbjQe3Fh9W5p9x8LMEd\n\n\"Reduce minPoolCost to 75 ada and increase Plutus Memory Limits (Part 2)\" (gov_action14dr5yg75pchr2sz42djtuflpvx5qnsek29qg7s7cft8lzrqt5vrqqtqntpk) is a Protocol Parameter Change Governance Action proposed through the Intersect Parameter Committee. It bundles two previously recommended changes: a reduction of minPoolCost from 170 ada to 75 ada, and the second and final step of an approved 25 percent increase to the Plutus memory limits, raising maxTxExecutionUnits memory from 16,500,000 to 17,500,000 units and maxBlockExecutionUnits memory from 72,000,000 to 77,500,000 units. The action also restates both execution step limits at their current values, which effects no change.\n\nUnder Article II.6.1, governance actions \"shall follow a standardized and legible format before being recorded or enacted on-chain\" with an anchor document that is \"immutable and incapable of being altered after submission\". The proposal anchor is a content addressed IPFS document whose hash matches the on-chain record, and it contains the title, abstract, justification, and supporting materials that Article II.6.2 requires.\n\nUnder Article II.6.3, \"Hard Fork Initiation\" and \"Parameter Update\" actions \"shall undergo sufficient technical review and scrutiny as mandated by the Guardrails to ensure that the governance action does not endanger the security, functionality, performance, or long-term sustainability of the Cardano Blockchain.\" The record here is substantial. The minPoolCost reduction is the subject of Parameter Committee proposal PCP-006, published 30 March 2026 and ratified by the Intersect Technical Steering Committee on 9 July 2026. The memory increase was recommended by the Parameter Committee on 8 May 2025 and ratified by the Technical Steering Committee on 1 October 2025, covering the complete two step plan of which Part 1 was enacted at epoch 614; the full target values of both memory parameters were exercised together on the Preview testnet in July 2026. On the record before us, that is sufficient.\n\nThe Appendix I parameter guardrails are met on the on-chain values. The memory increases satisfy the hard bounds of MTEU-M-01, which requires that maxTxExecutionUnits memory \"must not exceed 40,000,000 units\", and MBEU-M-01, which caps maxBlockExecutionUnits memory at 120,000,000 units, and neither parameter is decreased. The per epoch change limits that necessitated the two step structure are respected: this action increases the transaction memory limit by 1,000,000 units against the 2,500,000 unit guidance of MTEU-M-04, and the block memory limit by 5,500,000 units against the 10,000,000 unit guidance of MBEU-M-03. The minPoolCost reduction satisfies MPC-01 and MPC-02, remaining non negative and below the 500 ada ceiling. Both critical parameter tracks of Appendix I.2.1 are engaged and satisfied: maxBlockExecutionUnits is critical to the operation of the blockchain, so under PARAM-03a and Article II.5.1 the action requires SPO ratification, and the 90 day interval of PARAM-04a between off-chain publication and on-chain submission is exceeded by more than a year; minPoolCost is critical to the governance system, so PARAM-05a applies its DRep threshold and the 90 day interval of PARAM-06a is satisfied by the roughly 111 days between the publication of PCP-006 and submission. These threshold requirements are enforced by the ledger and are noted here as satisfied preconditions rather than open questions.",
+    "counterargumentDiscussion": "A valid counterargument is that bundling two independent changes, an economic parameter affecting stake pool competition and a pair of technical parameters affecting script execution, forces voters into an all or nothing choice: a DRep or SPO who supports the memory increase but opposes the pool cost reduction cannot split the vote, and each change would stand or fall on its own merits if submitted separately. We acknowledge that this argument has force, particularly because the two changes travelled through separate committee processes on separate timelines. We reject that view on these facts. The Constitution does not prescribe how proposers structure Parameter Change actions, and each bundled change independently carries the technical review that Article II.6.3 requires and independently satisfies every applicable guardrail. The ledger treats a parameter action as a single atomic proposal, and the decision of whether the combined package is acceptable is exactly the judgment committed to the Cardano Community, its DReps, and, for the security relevant portion, its SPOs to make.",
+    "conclusion": "Ace Alliance finds the proposed \"Reduce minPoolCost to 75 ada and increase Plutus Memory Limits (Part 2)\" Protocol Parameter Change Governance Action Constitutional under Article II.6 and the applicable Appendix I parameter guardrails.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreifc5ct5fpeu4ygx6k4cqzbyzny7xfmuljywgn7jge3zkf2tidacym"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "f200d39e39a3db74bdaa4f04865b4da38b5403322984c6fdcaf09bd44cacf868"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
