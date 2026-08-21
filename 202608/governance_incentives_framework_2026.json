@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action174lclj6wswk3km6chl755vp24ja44yy8fjput7z20795hdpuax7qq67pvcp",
+    "summary": "Ace Alliance finds the proposed \"Governance Incentives Framework 2026\" Treasury Withdrawals Governance Action Unconstitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "\"Governance Incentives Framework 2026\" (gov_action174lclj6wswk3km6chl755vp24ja44yy8fjput7z20795hdpuax7qq67pvcp) is a Treasury Withdrawals Governance Action requesting 4,207,967 ada over a twelve month term, proposed by Seomon and Sebastian Pereira, each of whom signed the anchor document as an author. The withdrawal would fund a research and development program on governance incentives, delivered across seven milestones and producing a Governance Incentives Framework, a public dataset and dashboard, documented incentive models and formula outputs, findings from a controlled incentive pilot directed at delegate representatives, and a Cardano Improvement Proposal. We find the Action unconstitutional on two independent grounds, each of which concerns the accountability architecture that the Constitution requires of every Treasury Withdrawal rather than the value of the research the proposal describes.\n\nUnder Article II.6.1, governance actions \"shall follow a standardized and legible format before being recorded or enacted on-chain\", supported by a document that \"shall be immutable and incapable of being altered after submission\". The anchor is served over a hosted gateway rather than an ipfs scheme identifier, but the identifier embeds the content address of the document it names, and the on-chain hash matches the document retrieved from it. An identifier that commits to the content it resolves to cannot be made to resolve to altered content after submission, whoever operates the host, so Article II.6.1 is satisfied. The anchor carries the title, abstract, motivation, rationale, and supporting references that Article II.6.2 requires.\n\nUnder Article II.7.1, Treasury Withdrawals \"must specify the terms of the withdrawal\", including \"the purpose of the withdrawal, the period for delivery of proposed activities which the withdrawal shall be used for, the relevant costs and expenses of the proposed activities, circumstances under which the withdrawal might be refunded to the Cardano Treasury.\" The proposal specifies each of these: its purpose, a twelve month delivery period organized into seven milestones with stated months, workstream level costs totalling 4,207,967 ada that match the withdrawal recorded on chain to the lovelace, and refund conditions returning unused contingency and pilot reserves, returning amounts proportionally on partial delivery or scope reduction, and returning any allocation rendered unnecessary by overlap with research already funded elsewhere. The Net Change Limit required by Article II.7.3 has been set at 500,000,000 ada for the period beginning at the start of Epoch 613 and ending at the close of Epoch 713, and this withdrawal does not cause that limit to be exceeded. We note for the Community that the proposal measures itself against a limit of 350,000,000 ada that has been superseded for the same period; the correction favours the proposal and does not affect compliance. The withdrawal is denominated in ada as the Treasury guardrails require. The allocation that Article II.7.4 requires for \"periodic independent audits and the implementation of oversight metrics\" is present as a dedicated line of 126,239 ada for independent audit and oversight, alongside published metrics and a monthly public reporting commitment.\n\nUnder Article II.7.5, Treasury Withdrawals \"shall designate one or more administrators responsible for monitoring how the funds are used, and ensuring the deliverables are achieved.\" The anchor designates no administrator. It allocates 126,239 ada to administration, audit and oversight support, it refers to auditors who are to receive financial reporting on the use of contingency funds, and it commits to a final reconciliation published as part of an oversight reporting cycle, but it identifies no person, no institution, no company, and no smart contract as responsible for monitoring how the funds are used or for ensuring that the deliverables are achieved. The Constitution is permissive as to who may hold that role, and it does not prohibit the recipient of the funds from holding it, but it requires that someone hold it and that the Action designate them. An administrator who is not identified cannot be held to the duty that Article II.7.5 creates, and no administrator exists to begin monitoring at the moment the funds leave the Treasury, which is the moment the obligation attaches. Funding an oversight function is not the same act as designating the party accountable for performing it. The Action fails Article II.7.5.\n\nUnder Article II.7.6, ada received from a treasury withdrawal \"must be kept in one or more separate accounts that can be audited by the Cardano Community, and such accounts shall not be delegated to an SPO but must be delegated to the predefined abstain voting option.\" The destination recorded on chain is a key hash stake account, and it is the same account that the submitting transaction names as the deposit return address, so the account that would receive the withdrawal is an account the proposers already control and already use to transact with the governance system. The text of Article II.7.6 does not require script locked custody, and the account is not delegated to any stake pool. At the time of our review, however, the account is delegated to no delegate representative at all, and therefore not to the predefined abstain voting option that Article II.7.6 names. The provision states a requirement of delegation, not a standard of voting behaviour, and an account that abstains through inaction does not meet it. The Action fails Article II.7.6.\n\nThese two findings concern the terms on which the Cardano Treasury may be drawn upon and not the merits of the work proposed. Each is curable. An Action that designates an administrator responsible for monitoring the funds and the deliverables and directs the withdrawal to a separate account delegated to the predefined abstain voting option would present a materially different record to this Committee, and nothing in this rationale should be read as a judgment on whether Cardano should fund research into governance incentives.",
+    "counterargumentDiscussion": "A valid counterargument is that the proposal does fund an oversight function, through a dedicated audit and oversight allocation, a published metrics regime, monthly public reporting, and auditors to whom the use of contingency funds must be justified, and that an administrator will necessarily be engaged once the funds are available to pay for one. We acknowledge that this argument has force, and we accept that the proposal contemplates accountability rather than ignoring it. We reject that view on these facts. Article II.7.5 requires designation, and designation is an act performed in the Action itself, so that the Community knows before it votes who will answer for the funds. An oversight arrangement that can only be constituted after the withdrawal is enacted does not exist at the moment the funds leave the Treasury, and the Community would be approving the withdrawal without knowing who is to be held responsible for it.\n\nA second counterargument is that Article II.7.6 governs ada \"being held by an administrator prior to further disbursement to the Treasury Withdrawal Recipient\", so that where funds pass directly to the recipient and no administrator holds them, the delegation and auditability requirements never attach. This is a serious question and we have taken it seriously, because the provision is drafted around a holding period. We reject that view on these facts. Reading the provision that way would withdraw its protections precisely where custody is least accountable, so that a withdrawal routed through a designated administrator would be constrained while a withdrawal paid directly into a proposer controlled account would not. The requirements of separate community auditable accounts, no stake pool delegation, and delegation to the predefined abstain voting option attach to the account that the Action names as the destination of treasury ada, and on this record that account satisfies only the second of the three.",
+    "conclusion": "Ace Alliance finds the proposed \"Governance Incentives Framework 2026\" Treasury Withdrawals Governance Action Unconstitutional under Article II.7.5 and Article II.7.6.",
+    "internalVote": {
+      "constitutional": 0,
+      "unconstitutional": 5,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "https://gray-top-unicorn-495.mypinata.cloud/ipfs/bafkreia4wvoh2oa4hb55kvsxt3adyrrl2lyn245huo4lkeyhus3yvijq2q"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "7130cd947a523fe5436355c1a6ba25f9d59b57c77898fb55c86685c1fa7e4a96"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
