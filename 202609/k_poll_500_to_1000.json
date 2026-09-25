@@ -1,0 +1,94 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action17m7nv7839mw93hv889tqzj0umv9ckm780f0nq02fep78f50uedxqq6g5mt9",
+    "summary": "Ace Alliance finds the proposed \"Should stakePoolTargetNum (k) be raised from 500 to 1000? (SPO poll)\" Info Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://bafkreiaoougowhhwjlr7wl2yxxoveerozb3jdkodikhrj2y7gnxneymdgy\n\n\"Should stakePoolTargetNum (k) be raised from 500 to 1000? (SPO poll)\" (gov_action17m7nv7839mw93hv889tqzj0umv9ckm780f0nq02fep78f50uedxqq6g5mt9) is an Info Governance Action that asks the Cardano Community, and Stake Pool Operators in particular, whether there is sufficient support to proceed with a later Parameter Update action raising the protocol parameter stakePoolTargetNum (commonly known as the \"k\" parameter) from 500 to 1000. Under Article III.1.4, the Constitutional Committee is \"limited to voting on the constitutionality of governance actions, including any proposed or contemplated actions contained within 'Info' actions.\" Our review therefore concerns the constitutionality of this poll and of the change it contemplates, not the economic or technical merits of a higher stakePoolTargetNum, which are committed to the Cardano Community, its SPOs, and its DReps to decide, not to the Constitutional Committee.\n\nUnder Article II.6.1, governance actions \"shall follow a standardized and legible format before being recorded or enacted on-chain,\" including a URL and hash of a context document that is \"immutable and incapable of being altered after submission.\" The Action anchors its metadata at a content-addressed IPFS URL, and the blake2b-256 hash of the document retrieved at that URL matches the hash recorded on-chain. The anchor document supplies the title, abstract, motivation, rationale, and references that Article II.6.2 requires, including a plain account of how staking rewards, saturation, and pledge interact and the history of prior changes to this parameter. Any ada owner may put such a question to the Community. Article II.2.1 entitles ada owners to \"access and participate in the on-chain decision-making processes of the Cardano Blockchain ecosystem,\" and Article II.5.1 expressly assigns SPOs a vote on \"Info\" actions. Using an Info Action to gauge sentiment in this way is a valid exercise of those governance rights.\n\nAlthough this Action seeks information about a specific protocol parameter and a specific value, it does not commit any change to the protocol rules, because it is not a Parameter Update action. Under Appendix I.8, \"'Info' actions are not enacted on-chain,\" and no ratification of this poll can alter stakePoolTargetNum. Any change must come through a separate Parameter Update action, which will be subject on its own terms to the technical review Article II.6.3 requires and to the guardrails for stakePoolTargetNum in Appendix I.2.4, including the requirement that economic advice based on analysis accompany a change. The contemplated value of 1000 lies within the range permitted by SPTN-01 and SPTN-02, which bound the parameter between 250 and 2,000, so the change this poll contemplates would not itself be unconstitutional if later proposed in proper form.",
+    "conclusion": "Ace Alliance finds the proposed \"Should stakePoolTargetNum (k) be raised from 500 to 1000? (SPO poll)\" Info Governance Action Constitutional.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "https://gateway.pinata.cloud/ipfs/bafkreia3u74dgyvg5v3u7wxwip44wwqzyhynqqm4wzyhkkwevaiynlihnm"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "ab85aad06200d7d7ec79181b68d0651083ffdd9b9bcd15c54212d4d681a9b680"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}

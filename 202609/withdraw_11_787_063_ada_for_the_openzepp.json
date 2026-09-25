@@ -1,0 +1,100 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1gxxltxr02p28a398p8c6t08xhpg82wkkv9xgwvuxkly48lhgf20sqlkl2l8",
+    "summary": "Ace Alliance finds the proposed \"Withdraw 11,787,063 ada for the OpenZeppelin Stack administered by Intersect\" Treasury Withdrawals Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://bafkreihx5nry4clktmuzvfdtomijceleavxmvnbwbdn2m724pzgihwxa6u\n\n\"Withdraw 11,787,063 ada for the OpenZeppelin Stack administered by Intersect\" (gov_action1gxxltxr02p28a398p8c6t08xhpg82wkkv9xgwvuxkly48lhgf20sqlkl2l8) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II.6 and the additional Treasury Withdrawal standards in Article II.7. The Action seeks 11,787,063 ada to fund a twelve-month engagement delivered in four quarterly milestones, in which OpenZeppelin produces three reference implementations for Cardano DeFi and institutional use cases, an audited Cardano contracts library with associated developer tooling and documentation, and a dedicated security capacity of 22 researcher weeks, with a developer enablement and co-marketing program included at no additional cost. The vendor is OpenZeppelin, which states that it brought the proposal forward independently rather than at the sponsorship of any ecosystem body. The ask comprises 11,443,750 ada for delivery, converted at a stated reference rate of 0.16 USD per ada against a delivery budget of 1,831,000 USD, and a 343,313 ada Intersect administration fee. Intersect is designated as administrator, and the withdrawn funds are held and released through the 2026 instance of the treasury management smart contract framework developed by Sundae Labs.\n\nUnder Article II.6.1, governance actions \"shall follow a standardized and legible format before being recorded or enacted on-chain,\" supported by a document that \"shall be immutable and incapable of being altered after submission.\" The anchor is a content-addressed IPFS document, a form that cannot be made to resolve to altered content after submission, and we computed its blake2b-256 hash from the retrieved document as 3f0173bf9af7f772002cb18283018e69d780be215c7ddaeafe2e7f9076fdc0fc and matched it against the hash recorded on-chain rather than relying on an indexer validity flag. The metadata supplies the title, abstract, motivation, rationale, itemized budget, milestone table with acceptance criteria, and supporting references that Article II.6.2 requires. Under Article II.7.1, Treasury Withdrawals \"must specify the terms of the withdrawal,\" including \"the purpose of the withdrawal, the period for delivery of proposed activities which the withdrawal shall be used for, the relevant costs and expenses of the proposed activities, circumstances under which the withdrawal might be refunded to the Cardano Treasury.\" Each of these is specified: the purpose across three connected workstreams, a twelve-month delivery period running in four quarterly milestones from the signature of the legal contract, costs itemized per milestone in both ada and USD and summing to the amount recorded on-chain, and refund circumstances enforced at the contract level, under which funds remaining in the contract at expiry sweep back to the Cardano Treasury automatically. The disclosure requirement of Article II.7.2 is met expressly, and in the affirmative form the provision contemplates: OpenZeppelin states that this is its first funding request to the Cardano Treasury, that it has received no ada from the Cardano Treasury within the prior 24 months, and that it has received no Project Catalyst funding. A Net Change Limit of 500,000,000 ada is in force for the period spanning epochs 613 through 713, agreed by the DReps at the greater-than-50-percent active voting stake threshold TREASURY-01a requires, and this withdrawal does not cause that limit to be exceeded, on its own or in aggregate with the withdrawals enacted within the window at the time of this review, satisfying Article II.7.3 and TREASURY-02a. The withdrawal is denominated in ada as TREASURY-03a requires, the USD figures serving only as the conversion reference the proposal states.\n\nArticles II.7.4, II.7.5, and II.7.6 are satisfied through the Intersect-administered Treasury Reserve Smart Contract pattern previously found constitutional by this Committee. Under Article II.7.5, Treasury Withdrawals \"shall designate one or more administrators responsible for monitoring how the funds are used, and ensuring the deliverables are achieved,\" and the proposal designates Intersect, an entity distinct from the vendor that receives the funds. Intersect has publicly agreed to that designation: the metadata anchor carries an Intersect author witness whose ed25519 signature we verified ourselves over the canonicalized document body, made with the same key that signs anchors this Committee has previously accepted from Intersect, so key continuity holds and the designation is not a unilateral assertion by the proposer. Under Article II.7.4, which requires \"an allocation of ada as a part of such funding request to cover the cost of periodic independent audits and the implementation of oversight metrics as to the use of such ada,\" the allocation is the 343,313 ada administration fee, stated separately from the delivery budget and paid to a party other than the recipient, which the proposal states covers audit and administrative oversight, with independent oversight provided through Intersect and a technically capable third party under reporting obligations and milestone-based disbursement controls. The oversight metrics prong is implemented on this record rather than merely promised: each of the four milestone payments is released only after OpenZeppelin submits a Milestone Acceptance Form supported by publicly accessible evidence against every stated acceptance criterion and Intersect Delivery Assurance verifies and approves it, an oversight committee of six external and independent entities holds multi-signature authority over the funding, disbursement, pause, sweep, and reorganize actions of the framework, and a public dashboard allows the community to audit the reserve and project-specific contracts on-chain. On the record before us, that is sufficient. Under Article II.7.6, the on-chain withdrawal destination is stake1784sdxt6jjennmstphgdu7l7c2scf5d02a6cve2dgn5s2kq5u3j9v, which is a script-locked stake address (CIP-19 mainnet header byte 0xf1) controlled by Intersect, is not delegated to any stake pool, and is delegated to the predefined always-abstain DRep, each of which we verified on-chain at the time of this review, and the framework enforces those conditions for all funds held within it. Only the Treasury Withdrawal guardrails in Appendix I.3 are engaged, and each is addressed above; the parameter, hard-fork, no-confidence, constitution, and committee guardrail groups are not engaged by a Treasury Withdrawals action.",
+    "counterargumentDiscussion": "A reviewer might argue that Article II.7.4 is not satisfied, because the proposal carries no labeled audit or oversight line in its budget, and the 343,313 ada is presented as an administration fee rather than as an audit allocation. We reject that view on these facts: Article II.7.4 requires an allocation, not an itemization. The proposal states that \"Audit and oversight costs are included within the overhead applied to this proposal,\" and the overhead in the budget is the 3 percent Intersect administration fee, stated separately from the delivery budget and payable to a party other than the recipient. Intersect, as administrator, expressly promises audit and oversight as part of that administration: its published policies commit it to coordinate and initiate the necessary financial audit for each contract, to oversee that the audit is undertaken for each Statement of Work term, and to verify milestones and report on them publicly. Because those services are part of what the administration fee buys, the fee is an allocation of ada to cover the cost of periodic independent audits and oversight metrics, and on the record before us, that is sufficient.\n\nA reviewer might further argue that the release of 20 percent of the delivery budget on signature of the legal contract, before any milestone evidence has been submitted, weakens the refund mechanism on which the finding under Article II.7.1 depends, because 2,288,750 ada is converted to a USD-denominated stablecoin and paid out before any deliverable has been verified by anyone. This is a serious question and we have taken it seriously. We reject that view on these facts: Article II.7.1 requires that the circumstances of refund be specified, not that every ada withdrawn remain recoverable in every scenario. The circumstances here are specified and enforced by contract logic rather than by promise, the kickoff release is itself conditioned on execution of the legal contract with Cardano Development Holdings so that no ada reaches the vendor before an enforceable agreement exists, and the remaining 80 percent stays gated on milestone verification throughout. Whether a 20 percent mobilization payment is a prudent commercial term for an engagement of this length and value is a question committed to the Cardano Community and its DReps to decide, not to the Constitutional Committee.\n\nA reviewer might also argue that the scope is too indeterminate to meet the specification standard of Article II.7.1, because the proposal defers the choice of target smart contract language to an initial evaluation phase and describes the contracts library component list as preliminary and indicative. We acknowledge that this argument has force, and the open terms deserve the attention of DReps. We reject that view on these facts: The Constitution sets a floor, not a detailed governance manual. Article II.7.1 asks for the purpose, the delivery period, the relevant costs, and the refund circumstances of the proposed activities, and each is present at the level the provision sets: the three reference implementations are named with their functional scope, the milestone table states per milestone deliverables against measurable acceptance criteria including code coverage thresholds, testnet demonstrability, published audit reports with critical and high findings resolved, and open-source release, and the costs are fixed per milestone in advance and do not vary with the resolution of the open terms. The administrator framework is the enforcement layer for whatever the evaluation phase resolves, because the acceptance gate applies to the resolved scope as it applies to the rest. DReps decide whether they accept a scope defined at this resolution.",
+    "conclusion": "Ace Alliance finds the proposed \"Withdraw 11,787,063 ada for the OpenZeppelin Stack administered by Intersect\" Treasury Withdrawals Governance Action Constitutional.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://bafkreih7qyzwndjjrltybe4ft3a5ryl56gqzof3d4u55jzv2zhatmrqape"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "3f0173bf9af7f772002cb18283018e69d780be215c7ddaeafe2e7f9076fdc0fc"
+      },
+      {
+        "@type": "Other",
+        "label": "Intersect Administration Financial Audit Policy (v1.1)",
+        "uri": "https://admin-services.docs.intersectmbo.org/governance/policies-and-guidance/administration-financial-audit-policy"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
