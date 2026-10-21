@@ -1,0 +1,116 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1znt2fr0chyye50nj0cdld2dvdjg3xsdfvq0fr37n43uehlvfkqdsqjnuq3n",
+    "summary": "Ace Alliance finds the proposed \"AURORA: Open infrastructure for bringing real credit markets to Cardano.\" Treasury Withdrawals Governance Action unconstitutional under Article II.6.1. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://bafkreibtt7p5gh2fqdxvnyg7ccja6cz4wgefhyt24z3xcf2ntcsie3ly2i\n\n\"AURORA: Open infrastructure for bringing real credit markets to Cardano.\" (gov_action1znt2fr0chyye50nj0cdld2dvdjg3xsdfvq0fr37n43uehlvfkqdsqjnuq3n) is a Treasury Withdrawals Governance Action and is therefore governed by both the general proposal standards in Article II.6 and the additional Treasury Withdrawal standards in Article II.7. The Action seeks 940,000 ada to fund approximately five months of work across four milestones on shared, open-source infrastructure for Cardano credit markets: a metadata standard, a verification framework, a discovery engine with open APIs and filtering tools, capital provider profile standards, developer tooling, a reference implementation, and independent security, legal, and Treasury-use review. Fairway is named as the Treasury Withdrawal Recipient and lead implementer, with technical contributions from Sundial and architectural advice from Fallen Icarus. The withdrawal is directed to a 3-of-5 multisignature account whose five signers the proposal designates as the AURORA Treasury Administrators.\n\nUnder Article II.6.1, governance actions \"shall follow a standardized and legible format before being recorded or enacted on-chain. This format shall include a URL hosting a document that outlines additional context for the proposed governance action, and the hash of this document. The document hosted by such a URL shall be immutable and incapable of being altered after submission, and the content of every on-chain Governance Action must be identical to the final off-chain version of the proposed action.\" The anchor URL recorded on-chain for this Action is https://raw.githubusercontent.com/fairway-global/aurora-proposal/refs/heads/main/data.jsonld. That URL names the current state of the main branch of a GitHub repository, not a fixed version of a document. Anyone with write access to the repository can commit a new version of the file, and the same URL will then serve the new content. A URL of this kind is location-addressed: it identifies a place, and the document at that place remains capable of alteration after submission. The Constitution requires a document that is \"incapable of being altered after submission,\" and this anchor does not meet that standard. This Action is unconstitutional on this basis.\n\nThe defect is one of capability, not of occurrence. We retrieved the anchor document, computed its blake2b-256 hash as 2791bc5d48adfdb1d56b072891cfe0cd1e7235941e157d3c45774ea29b468fb1, and matched it against the hash recorded on-chain, and as of our review the repository history shows the file has not changed since it was committed shortly before submission. Article II.6.1, however, does not ask whether the document has been altered; it requires that the document be incapable of alteration. An on-chain hash recorded alongside a mutable URL reveals an alteration after the fact, but it does not prevent one, and a reader who follows the URL after an edit would receive a document that no longer matches the Action. GitHub itself offers a remedy: a URL that embeds the commit hash fixes the file at that commit, and content-addressed storage such as IPFS commits the identifier to the content. Either would have satisfied the provision.\n\nThe proposal itself recognizes this requirement. Section 11 of the full proposal, under the heading \"Canonical Proposal Reference,\" states that \"The final Treasury Withdrawal governance action will reference an immutable canonical version of this proposal hosted through IPFS or an equivalent content-addressed storage system.\" The Action as submitted does not do what the proposal promises. Its anchor is neither IPFS nor content-addressed, and the full proposal on which the Action relies is referenced through a GitHub release page whose URL likewise carries no hash of the document it names. The proposal therefore identifies the constitutional standard, commits to meeting it, and then submits an anchor that does not.\n\nThe remaining provisions of Article II.6 and Article II.7 are, with one exception discussed below, met on the record before us. The anchor supplies the title, abstract, motivation, rationale, and references that Article II.6.2 requires. Under Article II.7.1, the full proposal states the purpose, a delivery period of approximately five months across four milestones, a budget allocating 800,000 ada to core infrastructure development and 140,000 ada to review, hosting, Treasury-use oversight, and technical contingency, and refund circumstances under which ada remaining under administrator custody returns to the Cardano Treasury on termination. The disclosure requirement of Article II.7.2 is met: Fairway states that it has not received direct funding through a Treasury Withdrawals Governance Action for AURORA or substantially similar scope in the prior 24 months, and it discloses Treasury-derived ada received through Project Catalyst for separate projects. A Net Change Limit has been set, and this withdrawal does not cause it to be exceeded, satisfying Article II.7.3. Article II.7.4 is met by a 20,000 ada allocation for independent Treasury-use audits and oversight, with an interim audit after the second milestone and a final audit before closure. The withdrawal is denominated in ada. On Article II.7.6, we verified on-chain that the destination, stake179uthrjzt0395mukqctux9u2zchytk5py4hr0xd9ka7jtdqa9jgyq, is a script-locked stake address (CIP-19 mainnet header byte 0xf1), is not delegated to any stake pool, and is delegated to the predefined always-abstain DRep.",
+    "precedentDiscussion": "We also note a serious concern under Article II.7.5, which requires that Treasury Withdrawals \"shall designate one or more administrators responsible for monitoring how the funds are used, and ensuring the deliverables are achieved.\" The proposal names five individuals, under the heading \"Proposed AURORA Treasury Administrators,\" as the signers of the 3-of-5 multisignature account and as the administrators of the withdrawal. The on-chain record shows that three of the five signing keys signed the transaction that registered that account and delegated it to the predefined abstain option. The keys of the remaining two signers have not been used in any transaction, and we have found no confirmation that those two individuals have consented to serve on the administrator panel. The submission transaction carries only the submitter's signature, and the anchor document carries no author witness.\n\nWe have also searched the anchor, the full proposal, its repositories, the project website, and the presentation deck, and we find no legal agreement or other undertaking by which the administrators accept responsibility for the funds; the only statement of their duties is the proposal's own description of them. The best practice would have been for all five members of the multisignature account to witness the submission transaction, which the ledger permits by listing their keys as required signers, along with a public statement from each signer that the keys are under their control. Alternately, they could sign a transaction carrying a metadata attestation that they support the Action and accept the role, and/or provide a signed contract in the legal jurisdiction of their choice.\n\nBecause the Action fails Article II.6.1, we need not rule on Article II.7.5 here. Future submitters should be aware, however, that we regard an administrator designation unsupported by the confirmed consent of every designated administrator as a concern under Article II.7.5.",
+    "counterargumentDiscussion": "A reviewer might argue that the Action satisfies Article II.6.1 in substance, because the purpose of the immutability requirement is to ensure that the document reviewed is the document submitted, and that purpose is served here. The on-chain hash matches the anchor document, the file has not been changed since submission, the repository applies a branch rule restricting updates, and the full proposal is preserved as a GitHub release that GitHub marks as immutable. On that view, a reader can always confirm whether the document has been altered, and nothing has been. We acknowledge that this argument has force. We reject that view on these facts: Article II.6.1 does not ask whether the document is verifiable or whether it has in fact changed. It requires that the document be \"immutable and incapable of being altered after submission.\" A branch rule is a repository setting its owner can change, and a hash held elsewhere detects an alteration without preventing it. The protections the proposers cite attach to the release and to repository settings, not to the anchor URL recorded on-chain, which continues to serve whatever the main branch holds. Only an identifier that commits to the content, such as a commit-hash URL or a content-addressed URI, makes the anchored document incapable of alteration, and the proposal itself commits to providing one. A resubmission anchored to such an identifier would cure the defect.",
+    "conclusion": "Ace Alliance finds the proposed \"AURORA: Open infrastructure for bringing real credit markets to Cardano.\" Treasury Withdrawals Governance Action unconstitutional under Article II.6.1 because its anchor document is hosted at a mutable GitHub main-branch URL that remains capable of alteration after submission, contrary to both the Constitution and the proposal's own commitment to an immutable, content-addressed reference.",
+    "internalVote": {
+      "constitutional": 0,
+      "unconstitutional": 5,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "https://raw.githubusercontent.com/fairway-global/aurora-proposal/refs/heads/main/data.jsonld"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "2791bc5d48adfdb1d56b072891cfe0cd1e7235941e157d3c45774ea29b468fb1"
+      },
+      {
+        "@type": "Other",
+        "label": "Full Treasury Proposal Release",
+        "uri": "https://github.com/fairway-global/aurora-proposal/releases/tag/proposal-snapshot-2026-10-18"
+      },
+      {
+        "@type": "Other",
+        "label": "Submission Transaction",
+        "uri": "14d6a48df8b9099a3e727e1bf6a9ac6c911341a9601e91c7d3ac799bfd89b01b"
+      },
+      {
+        "@type": "Other",
+        "label": "Administrator Account Registration and Delegation Transaction",
+        "uri": "6a7681b8fa5a051d0c13fe0075bc899e5bb08da37c59dd3ec2ea785ec8921c5c"
+      },
+      {
+        "@type": "Other",
+        "label": "On-chain Withdrawal Destination Stake Address",
+        "uri": "stake179uthrjzt0395mukqctux9u2zchytk5py4hr0xd9ka7jtdqa9jgyq"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
