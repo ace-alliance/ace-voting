@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "@language": "en-us",
+    "CIP100": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0100/README.md#",
+    "CIP129": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0129/README.md#",
+    "CIP136": "https://github.com/cardano-foundation/CIPs/blob/master/CIP-0136/README.md#",
+    "hashAlgorithm": "CIP100:hashAlgorithm",
+    "body": {
+      "@id": "CIP136:body",
+      "@context": {
+        "govActionId": "CIP129:governance-action-identifiers",
+        "references": {
+          "@id": "CIP100:references",
+          "@container": "@set",
+          "@context": {
+            "GovernanceMetadata": "CIP100:GovernanceMetadataReference",
+            "Other": "CIP100:OtherReference",
+            "label": "CIP100:reference-label",
+            "uri": "CIP100:reference-uri",
+            "RelevantArticles": "CIP136:RelevantArticles"
+          }
+        },
+        "summary": "CIP136:summary",
+        "rationaleStatement": "CIP136:rationaleStatement",
+        "precedentDiscussion": "CIP136:precedentDiscussion",
+        "counterargumentDiscussion": "CIP136:counterargumentDiscussion",
+        "conclusion": "CIP136:conclusion",
+        "internalVote": {
+          "@id": "CIP136:internalVote",
+          "@container": "@set",
+          "@context": {
+            "constitutional": "CIP136:constitutional",
+            "unconstitutional": "CIP136:unconstitutional",
+            "abstain": "CIP136:abstain",
+            "didNotVote": "CIP136:didNotVote",
+            "againstVote": "CIP136:againstVote"
+          }
+        }
+      }
+    },
+    "authors": {
+      "@id": "CIP100:authors",
+      "@container": "@set",
+      "@context": {
+        "did": "@id",
+        "name": "http://xmlns.com/foaf/0.1/name",
+        "witness": {
+          "@id": "CIP100:witness",
+          "@context": {
+            "witnessAlgorithm": "CIP100:witnessAlgorithm",
+            "publicKey": "CIP100:publicKey",
+            "signature": "CIP100:signature"
+          }
+        }
+      }
+    }
+  },
+  "hashAlgorithm": "blake2b-256",
+  "body": {
+    "govActionId": "gov_action1wpjynage9uu4rg7rev2g2g2u0spvj5g3fe6lqq286m3dl5tdv47sqhysy4u",
+    "summary": "Ace Alliance finds the proposed \"State of the Cardano Developer Ecosystem - 2026 Survey\" Info Governance Action Constitutional. Rationales are archived at https://github.com/ace-alliance/ace-voting/",
+    "rationaleStatement": "A [PDF version][pdf-link] of this rationale is also made available.\n\n[pdf-link]: ipfs://bafkreiho7caqqoihwn6ywaka6dvfhjxd4lykrslca4chvgspd2urvdlou4\n\n\"State of the Cardano Developer Ecosystem - 2026 Survey\" (gov_action1wpjynage9uu4rg7rev2g2g2u0spvj5g3fe6lqq286m3dl5tdv47sqhysy4u) is an Info Governance Action submitted by the Cardano Foundation that invites developers building on Cardano to complete the fifth annual developer ecosystem survey, and invites other governance participants to share it with developers they know. The survey is offered in nine languages, requires no wallet or ada, and records its questions and answers on chain under the CIP-179 survey format, with the code that runs it and builds its report published as open source. The proposer states plainly that the action \"doesn't change anything or ask for a decision,\" requests no withdrawal from the Cardano Treasury, and contemplates no later governance action. Under Article III.1.4, the Constitutional Committee is \"limited to voting on the constitutionality of governance actions, including any proposed or contemplated actions contained within 'Info' actions.\" Our review therefore concerns whether this action meets the standards the Constitution sets for every governance action, not whether a governance action is the best channel for promoting a survey, which is committed to the Cardano Community and its DReps to decide, not to the Constitutional Committee.\n\nUnder Article II.6.1, governance actions \"shall follow a standardized and legible format before being recorded or enacted on-chain,\" including a URL and hash of a context document that is \"immutable and incapable of being altered after submission.\" The action anchors its metadata at a content-addressed IPFS URL, and the blake2b-256 hash of the document retrieved at that URL matches the hash recorded on chain. The document follows the CIP-100 and CIP-108 structure and names the Cardano Foundation as its author. It carries two fields beyond the standard ones, one linking the action to the on-chain survey record and one restating its deposit, return account, and action type, and neither impairs the legibility of the document. The document supplies the title, abstract, motivation, rationale, and references that Article II.6.2 requires, and its rationale explains why the proposer chose an Info Action to reach developers outside the usual developer channels.\n\nUnder Appendix I.8, \"'Info' actions are not enacted on-chain. No guardrails are imposed on 'Info' actions.\" Article II.2.1 entitles ada owners to \"access and participate in the on-chain decision-making processes of the Cardano Blockchain ecosystem,\" including \"otherwise taking part in on-chain governance actions,\" and an Info Action that informs the Community and requests its engagement is a valid exercise of that right. Because this action contains no proposed or contemplated action, no further provision of the Constitution is engaged.",
+    "precedentDiscussion": "None",
+    "counterargumentDiscussion": "A valid counterargument is that this action uses the governance process as a notice board. It asks no question of the Community, its proposer advises voters that Abstain \"is the way to go,\" and it draws the attention of every DRep, SPO, and Constitutional Committee member to a matter that could be announced through ordinary channels. On this reading, a governance action that seeks no decision is not a governance action in the sense the Constitution contemplates. We acknowledge that this argument has force, because the attention of governance participants is a finite resource, and actions that ask nothing of them carry a real cost. We reject that view on these facts: the Constitution does not require an Info Action to pose a question or to seek a particular outcome. Appendix I.8 imposes no guardrails on Info Actions, and Article II.6.2 requires a justification, which the proposer supplies by explaining why it chose this channel. The proposer has also posted the 100,000 ada deposit the protocol requires of every governance action. The proposer's suggestion that voters abstain is guidance, not a constraint, and every voter remains free to vote as they see fit. Whether this is an appropriate use of a governance action is a policy question committed to the Cardano Community and its DReps to decide, not to the Constitutional Committee.\n\nA reviewer might further argue that the action concerns the collection of data from members of the Community through a survey whose answers are published on chain, and that by placing that survey before governance participants it engages the right in Article II.2.7 to a governance process that is \"open, transparent, and protected from undue influence and manipulation.\" We acknowledge that the permanence of on-chain answers is a serious consideration for anyone who chooses to respond. We reject that view on these facts: the survey is not part of the governance action, and answering it neither depends on nor affects any vote on this or any other governance action. Participation is voluntary, the proposer discloses that answers are public, and the survey site explains what that means before a respondent begins. The governance process itself remains open and transparent, and nothing in this action exerts influence over how any governance participant votes. On the record before us, that is sufficient.",
+    "conclusion": "Ace Alliance finds the proposed \"State of the Cardano Developer Ecosystem - 2026 Survey\" Info Governance Action Constitutional.",
+    "internalVote": {
+      "constitutional": 5,
+      "unconstitutional": 0,
+      "abstain": 0,
+      "didNotVote": 0,
+      "againstVote": 0
+    },
+    "references": [
+      {
+        "@type": "RelevantArticles",
+        "label": "Cardano Constitution",
+        "uri": "ipfs://bafkreieyuknozbtewyurfqoagvplvykadn6a4u6wglupavdz46bbsnnl6e"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor URI",
+        "uri": "ipfs://Qmcg5XYqcMe9Xtd741SozLx4dFGCnB26G57BvSHZ4WQvqN"
+      },
+      {
+        "@type": "GovernanceMetadata",
+        "label": "Proposal Metadata Anchor Hash",
+        "uri": "0ac3f40505cab485e027989b2eebcb4897a2af0e483fe5fe1274c88ecd8290b1"
+      },
+      {
+        "@type": "Other",
+        "label": "CIP-179",
+        "uri": "https://cips.cardano.org/cip/CIP-0179"
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "Ace Alliance"
+    }
+  ]
+}
